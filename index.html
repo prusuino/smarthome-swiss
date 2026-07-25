@@ -45,7 +45,30 @@ header {
   color: #fff;
   padding: 4rem 1.5rem 4.5rem;
   text-align: center;
+  position: relative;
 }
+.lang-switch {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  display: flex;
+  gap: .15rem;
+  background: rgba(255,255,255,.16);
+  border-radius: 99px;
+  padding: .22rem;
+}
+.lang-switch button {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-weight: 650;
+  font-size: .8rem;
+  padding: .32rem .65rem;
+  border-radius: 99px;
+  cursor: pointer;
+}
+.lang-switch button:hover { background: rgba(255,255,255,.22); }
+.lang-switch button.active { background: #fff; color: #123f9e; }
 .hero-flag {
   display: inline-block;
   width: 72px; height: 72px;
@@ -221,6 +244,12 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 <body>
 
 <header>
+  <nav class="lang-switch" aria-label="Language">
+    <button data-lang="de">DE</button>
+    <button data-lang="en">EN</button>
+    <button data-lang="fr">FR</button>
+    <button data-lang="it">IT</button>
+  </nav>
   <a class="hero-flag" href="https://github.com/prusuino" target="_blank" rel="noopener" aria-label="GitHub profile">
     <img src="assets/prusuino.png" alt="prusuino logo">
   </a>
@@ -472,6 +501,219 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
   <p class="disclaimer">These are independent open-source projects. They are not affiliated with, endorsed by or supported by any of the data providers mentioned (FOEN, FOCP/Alertswiss, SLF, SED, ElCom, SFOE, E-Control, transport.opendata.ch or others). Home Assistant is a trademark of the Open Home Foundation; these projects are independent community integrations and are not affiliated with the Open Home Foundation. All software is provided "as is", without warranty of any kind. Do not rely on it for safety-critical decisions — always follow official channels for alerts and warnings.</p>
   <p>© 2026 smarthome-swiss.ch · <a href="https://github.com/prusuino" target="_blank" rel="noopener">prusuino on GitHub</a> · All integrations MIT- or repository-licensed on GitHub</p>
 </footer>
+
+<script>
+const I18N = {
+en: {
+  tagline: "Free, open-source Home Assistant integrations that bring official Swiss (and Austrian) open data into your smart home — rivers and lakes, public alerts, avalanche bulletins, earthquakes, public transport, EV charging, parking, electricity prices and more.",
+  s_int: "Integrations", s_free: "Free & open source", s_cloud: "Cloud accounts needed", s_lang: "Languages (DE·EN·FR·IT)",
+  env_t: "Environment & Safety", env_s: "Live data from Switzerland's official environmental and civil-protection services.",
+  mob_t: "Mobility", mob_s: "Public transport, EV charging and parking — live and cloud-account-free.",
+  ene_t: "Energy", ene_s: "Official Swiss electricity tariffs and solar feed-in reference prices for your energy dashboard.",
+  bld_t: "Building Automation", bld_s: "Native local control for Swiss building automation hardware.",
+  hacs: "Add to HACS",
+  d1: "Live water temperature, water level, discharge and flood danger levels for Swiss rivers and lakes from the official hydrological monitoring network. Set up all stations within a radius or pick a single favourite — with an automatically created dashboard.",
+  src1: "Data: Federal Office for the Environment (FOEN/BAFU) via LINDAS",
+  d2: "Official Swiss public alerts (Alertswiss) in Home Assistant: knows whether an alert polygon actually covers your home, shows map markers and ships a ticker, list and detail card plus an auto-created dashboard.",
+  src2: "Data: Federal Office for Civil Protection (Alertswiss)",
+  d3: "The official Swiss avalanche bulletin for your location: danger level, aspect and elevation information with proper EAWS terminology in four languages. Supports multiple locations — home, ski resort, tour region.",
+  src3: "Data: WSL Institute for Snow and Avalanche Research SLF (CC BY 4.0)",
+  d4: "Recent Swiss earthquakes on Home Assistant's built-in map, with an overview sensor (location · magnitude · date), a human-readable magnitude scale in four languages and automatic dashboard setup.",
+  src4: "Data: Swiss Seismological Service (SED) at ETH Zurich",
+  d5: "Live departure boards and saved door-to-door connections with platforms, transfer details and timetable browsing — including bundled Lovelace cards and optional OJP 2.0 real-time data.",
+  src5: "Data: transport.opendata.ch · Open Journey Planner (opentransportdata.swiss)",
+  d6: "Real-time availability of public EV charging stations across Switzerland: location status with free-connector counters, favourites with auto-created dashboard cards, charging prices from the federal price atlas and a bundled map card.",
+  src6: "Data: Swiss Federal Office of Energy (ich-tanke-strom.ch)",
+  d7: "The Austrian counterpart: real-time availability of public EV charging stations in Austria with favourites and a bundled Lovelace card, powered by the official E-Control directory.",
+  src7: "Data: E-Control / ladestellen.at",
+  d8: "Live free parking spaces in Swiss cities — Zürich, Basel, Winterthur, Bern and Frauenfeld — straight from each city's parking guidance system, with sensors and map markers.",
+  src8: "Data: official city parking guidance systems (open data)",
+  d9: "Your real electricity tariff in Home Assistant — works with any Swiss grid operator. Pick your municipality, operator and product; energy and grid components are selectable separately and feed directly into the Energy dashboard.",
+  src9: "Data: Federal Electricity Commission (ElCom)",
+  d10: "The official Swiss solar reference market price (Art. 15 EnFV) as a sensor — know what your exported solar energy is worth each quarter, ideal for feed-in revenue tracking.",
+  src10: "Data: Swiss Federal Office of Energy (SFOE)",
+  d11: "Full local control of the Innoxel Master 3 home automation controller — lights, dimmers, switches and covers (including second-generation blind modules) over the native SOAP interface. No cloud, no gateway.",
+  src11: "Works with: Innoxel Master 3 (noxnetRemote SOAP)",
+  inst_t: "How to install",
+  inst_intro: "All integrations are installed the same way via <a href='https://hacs.xyz' target='_blank' rel='noopener'>HACS</a> (Home Assistant Community Store):",
+  inst_1: "Click <strong>Add to HACS</strong> on any integration above — it opens your own Home Assistant and adds the repository automatically. (Or add it manually in HACS as a custom repository, type <em>Integration</em>.)",
+  inst_2: "Click <strong>Download</strong> in HACS and restart Home Assistant.",
+  inst_3: "Go to <strong>Settings → Devices &amp; services → Add integration</strong> and search for the integration name. A guided setup wizard does the rest.",
+  inst_note: "Every integration speaks <strong>German, English, French and Italian</strong> and comes with a detailed README on GitHub.",
+  sup_t: "Enjoying these integrations?",
+  sup_p1: "Everything here is free and always will be. Development, testing and maintenance happen in my spare time — if an integration is useful to you, a coffee keeps the updates coming.",
+  sup_p2: "Found a bug or have an idea? Open an issue on the respective <a href='https://github.com/prusuino' target='_blank' rel='noopener'>GitHub repository</a>.",
+  disc: "These are independent open-source projects. They are not affiliated with, endorsed by or supported by any of the data providers mentioned (FOEN, FOCP/Alertswiss, SLF, SED, ElCom, SFOE, E-Control, transport.opendata.ch or others). Home Assistant is a trademark of the Open Home Foundation; these projects are independent community integrations and are not affiliated with the Open Home Foundation. All software is provided \"as is\", without warranty of any kind. Do not rely on it for safety-critical decisions — always follow official channels for alerts and warnings."
+},
+de: {
+  tagline: "Kostenlose Open-Source-Integrationen für Home Assistant, die offizielle Schweizer (und österreichische) Open Data ins Smart Home bringen — Flüsse und Seen, Behördenwarnungen, Lawinenbulletins, Erdbeben, öffentlicher Verkehr, E-Ladestationen, Parkplätze, Strompreise und mehr.",
+  s_int: "Integrationen", s_free: "Gratis & Open Source", s_cloud: "Cloud-Konten nötig", s_lang: "Sprachen (DE·EN·FR·IT)",
+  env_t: "Umwelt & Sicherheit", env_s: "Live-Daten der offiziellen Schweizer Umwelt- und Bevölkerungsschutz-Dienste.",
+  mob_t: "Mobilität", mob_s: "ÖV, E-Ladestationen und Parkplätze — live und ohne Cloud-Konto.",
+  ene_t: "Energie", ene_s: "Offizielle Schweizer Stromtarife und Solar-Referenzpreise für dein Energie-Dashboard.",
+  bld_t: "Gebäudeautomation", bld_s: "Native lokale Steuerung für Schweizer Gebäudeautomations-Hardware.",
+  hacs: "Zu HACS hinzufügen",
+  d1: "Live-Wassertemperatur, Pegel, Abfluss und Hochwasser-Gefahrenstufen für Schweizer Flüsse und Seen aus dem offiziellen hydrologischen Messnetz. Richte alle Stationen im Umkreis oder einen einzelnen Favoriten ein — mit automatisch erstelltem Dashboard.",
+  src1: "Daten: Bundesamt für Umwelt (BAFU) via LINDAS",
+  d2: "Offizielle Schweizer Behördenwarnungen (Alertswiss) in Home Assistant: erkennt, ob ein Warnpolygon dein Zuhause wirklich betrifft, zeigt Karten-Marker und bringt Ticker-, Listen- und Detail-Karte plus automatisch erstelltes Dashboard mit.",
+  src2: "Daten: Bundesamt für Bevölkerungsschutz (Alertswiss)",
+  d3: "Das offizielle Schweizer Lawinenbulletin für deinen Standort: Gefahrenstufe, Expositionen und Höhenlagen mit korrekter EAWS-Terminologie in vier Sprachen. Unterstützt mehrere Standorte — Zuhause, Skigebiet, Tourengebiet.",
+  src3: "Daten: WSL-Institut für Schnee- und Lawinenforschung SLF (CC BY 4.0)",
+  d4: "Aktuelle Schweizer Erdbeben auf der eingebauten Home-Assistant-Karte, mit Übersichts-Sensor (Ort · Magnitude · Datum), verständlicher Magnituden-Skala in vier Sprachen und automatischer Dashboard-Einrichtung.",
+  src4: "Daten: Schweizerischer Erdbebendienst (SED) an der ETH Zürich",
+  d5: "Live-Abfahrtstafeln und gespeicherte Tür-zu-Tür-Verbindungen mit Gleisen, Umsteigedetails und Fahrplan-Browsing — inklusive mitgelieferter Lovelace-Karten und optionaler OJP-2.0-Echtzeitdaten.",
+  src5: "Daten: transport.opendata.ch · Open Journey Planner (opentransportdata.swiss)",
+  d6: "Echtzeit-Verfügbarkeit öffentlicher E-Ladestationen in der ganzen Schweiz: Standort-Status mit Frei-Zählern, Favoriten mit automatisch erstellten Dashboard-Karten, Ladepreise aus dem eidgenössischen Preisatlas und eine mitgelieferte Kartenansicht.",
+  src6: "Daten: Bundesamt für Energie (ich-tanke-strom.ch)",
+  d7: "Das österreichische Pendant: Echtzeit-Verfügbarkeit öffentlicher E-Ladestationen in Österreich mit Favoriten und mitgelieferter Lovelace-Karte, basierend auf dem offiziellen E-Control-Verzeichnis.",
+  src7: "Daten: E-Control / ladestellen.at",
+  d8: "Live freie Parkplätze in Schweizer Städten — Zürich, Basel, Winterthur, Bern und Frauenfeld — direkt aus den städtischen Parkleitsystemen, mit Sensoren und Karten-Markern.",
+  src8: "Daten: offizielle städtische Parkleitsysteme (Open Data)",
+  d9: "Dein echter Stromtarif in Home Assistant — funktioniert mit jedem Schweizer Netzbetreiber. Wähle Gemeinde, Betreiber und Produkt; Energie- und Netzkomponente sind separat wählbar und fliessen direkt ins Energie-Dashboard.",
+  src9: "Daten: Eidgenössische Elektrizitätskommission (ElCom)",
+  d10: "Der offizielle Schweizer Referenz-Marktpreis für Solarstrom (Art. 15 EnFV) als Sensor — wisse, was dein eingespeister Solarstrom pro Quartal wert ist, ideal fürs Einspeise-Ertragstracking.",
+  src10: "Daten: Bundesamt für Energie (BFE)",
+  d11: "Volle lokale Steuerung des Innoxel Master 3 — Lichter, Dimmer, Schalter und Storen (inklusive Storenmodule der zweiten Generation) über die native SOAP-Schnittstelle. Keine Cloud, kein Gateway.",
+  src11: "Kompatibel mit: Innoxel Master 3 (noxnetRemote SOAP)",
+  inst_t: "Installation",
+  inst_intro: "Alle Integrationen werden gleich installiert — via <a href='https://hacs.xyz' target='_blank' rel='noopener'>HACS</a> (Home Assistant Community Store):",
+  inst_1: "Klicke bei einer Integration oben auf <strong>Zu HACS hinzufügen</strong> — dein Home Assistant öffnet sich und fügt das Repository automatisch hinzu. (Oder manuell in HACS als benutzerdefiniertes Repository, Typ <em>Integration</em>.)",
+  inst_2: "In HACS auf <strong>Herunterladen</strong> klicken und Home Assistant neu starten.",
+  inst_3: "<strong>Einstellungen → Geräte &amp; Dienste → Integration hinzufügen</strong> öffnen und den Namen der Integration suchen. Ein geführter Assistent erledigt den Rest.",
+  inst_note: "Jede Integration spricht <strong>Deutsch, Englisch, Französisch und Italienisch</strong> und bringt ein ausführliches README auf GitHub mit.",
+  sup_t: "Gefallen dir diese Integrationen?",
+  sup_p1: "Alles hier ist kostenlos und bleibt es auch. Entwicklung, Tests und Pflege passieren in meiner Freizeit — wenn dir eine Integration nützt, hält ein Kaffee die Updates am Laufen.",
+  sup_p2: "Fehler gefunden oder eine Idee? Eröffne ein Issue im jeweiligen <a href='https://github.com/prusuino' target='_blank' rel='noopener'>GitHub-Repository</a>.",
+  disc: "Dies sind unabhängige Open-Source-Projekte. Sie sind mit keinem der genannten Datenanbieter (BAFU, BABS/Alertswiss, SLF, SED, ElCom, BFE, E-Control, transport.opendata.ch u.a.) verbunden und werden von diesen weder unterstützt noch gebilligt. Home Assistant ist eine Marke der Open Home Foundation; diese Projekte sind unabhängige Community-Integrationen und mit der Open Home Foundation nicht verbunden. Die Software wird ohne jegliche Gewährleistung bereitgestellt. Verlasse dich für sicherheitsrelevante Entscheidungen nicht darauf — befolge stets die offiziellen Kanäle für Warnungen."
+},
+fr: {
+  tagline: "Des intégrations Home Assistant gratuites et open source qui amènent les données ouvertes officielles suisses (et autrichiennes) dans votre maison connectée — rivières et lacs, alertes officielles, bulletins d'avalanches, séismes, transports publics, bornes de recharge, parkings, prix de l'électricité et plus encore.",
+  s_int: "Intégrations", s_free: "Gratuit & open source", s_cloud: "Comptes cloud requis", s_lang: "Langues (DE·EN·FR·IT)",
+  env_t: "Environnement & sécurité", env_s: "Données en direct des services officiels suisses de l'environnement et de la protection de la population.",
+  mob_t: "Mobilité", mob_s: "Transports publics, recharge et parking — en direct et sans compte cloud.",
+  ene_t: "Énergie", ene_s: "Tarifs suisses officiels de l'électricité et prix de référence solaire pour votre tableau de bord énergie.",
+  bld_t: "Domotique", bld_s: "Contrôle local natif pour le matériel domotique suisse.",
+  hacs: "Ajouter à HACS",
+  d1: "Température de l'eau, niveau, débit et degrés de danger de crue en direct pour les rivières et lacs suisses, depuis le réseau hydrologique officiel. Configurez toutes les stations dans un rayon donné ou une seule favorite — avec tableau de bord créé automatiquement.",
+  src1: "Données : Office fédéral de l'environnement (OFEV) via LINDAS",
+  d2: "Alertes officielles suisses (Alertswiss) dans Home Assistant : détecte si un polygone d'alerte couvre réellement votre domicile, affiche des marqueurs sur la carte et fournit des cartes ticker, liste et détail plus un tableau de bord créé automatiquement.",
+  src2: "Données : Office fédéral de la protection de la population (Alertswiss)",
+  d3: "Le bulletin d'avalanches suisse officiel pour votre emplacement : degré de danger, expositions et altitudes avec la terminologie EAWS correcte en quatre langues. Prend en charge plusieurs emplacements — domicile, station de ski, région de randonnée.",
+  src3: "Données : Institut WSL pour l'étude de la neige et des avalanches SLF (CC BY 4.0)",
+  d4: "Les séismes récents en Suisse sur la carte intégrée de Home Assistant, avec un capteur de synthèse (lieu · magnitude · date), une échelle de magnitude compréhensible en quatre langues et une configuration automatique du tableau de bord.",
+  src4: "Données : Service Sismologique Suisse (SED) à l'ETH de Zurich",
+  d5: "Tableaux de départs en direct et liaisons enregistrées de porte à porte avec voies, correspondances et consultation d'horaires — cartes Lovelace incluses et données temps réel OJP 2.0 en option.",
+  src5: "Données : transport.opendata.ch · Open Journey Planner (opentransportdata.swiss)",
+  d6: "Disponibilité en temps réel des bornes de recharge publiques dans toute la Suisse : statut par site avec compteur de bornes libres, favoris avec cartes de tableau de bord créées automatiquement, prix de recharge de l'atlas fédéral des prix et carte incluse.",
+  src6: "Données : Office fédéral de l'énergie (ich-tanke-strom.ch)",
+  d7: "Le pendant autrichien : disponibilité en temps réel des bornes de recharge publiques en Autriche avec favoris et carte Lovelace incluse, basé sur l'annuaire officiel E-Control.",
+  src7: "Données : E-Control / ladestellen.at",
+  d8: "Places de parc libres en direct dans les villes suisses — Zurich, Bâle, Winterthour, Berne et Frauenfeld — directement depuis les systèmes de guidage au parking des villes, avec capteurs et marqueurs sur la carte.",
+  src8: "Données : systèmes officiels de guidage au parking des villes (open data)",
+  d9: "Votre vrai tarif d'électricité dans Home Assistant — fonctionne avec tous les gestionnaires de réseau suisses. Choisissez commune, gestionnaire et produit ; les composantes énergie et réseau sont sélectionnables séparément et alimentent directement le tableau de bord énergie.",
+  src9: "Données : Commission fédérale de l'électricité (ElCom)",
+  d10: "Le prix de marché de référence suisse officiel pour le solaire (art. 15 OEneR) comme capteur — sachez ce que vaut votre énergie solaire injectée chaque trimestre, idéal pour suivre les revenus d'injection.",
+  src10: "Données : Office fédéral de l'énergie (OFEN)",
+  d11: "Contrôle local complet du contrôleur domotique Innoxel Master 3 — éclairages, variateurs, interrupteurs et stores (y compris les modules de stores de deuxième génération) via l'interface SOAP native. Sans cloud, sans passerelle.",
+  src11: "Compatible avec : Innoxel Master 3 (noxnetRemote SOAP)",
+  inst_t: "Installation",
+  inst_intro: "Toutes les intégrations s'installent de la même manière via <a href='https://hacs.xyz' target='_blank' rel='noopener'>HACS</a> (Home Assistant Community Store) :",
+  inst_1: "Cliquez sur <strong>Ajouter à HACS</strong> sur une intégration ci-dessus — votre Home Assistant s'ouvre et ajoute le dépôt automatiquement. (Ou ajoutez-le manuellement dans HACS comme dépôt personnalisé, type <em>Intégration</em>.)",
+  inst_2: "Cliquez sur <strong>Télécharger</strong> dans HACS puis redémarrez Home Assistant.",
+  inst_3: "Allez dans <strong>Paramètres → Appareils et services → Ajouter une intégration</strong> et cherchez le nom de l'intégration. Un assistant guidé fait le reste.",
+  inst_note: "Chaque intégration parle <strong>allemand, anglais, français et italien</strong> et dispose d'un README détaillé sur GitHub.",
+  sup_t: "Ces intégrations vous plaisent ?",
+  sup_p1: "Tout est gratuit et le restera. Le développement, les tests et la maintenance se font sur mon temps libre — si une intégration vous est utile, un café fait vivre les mises à jour.",
+  sup_p2: "Un bug ou une idée ? Ouvrez une issue sur le <a href='https://github.com/prusuino' target='_blank' rel='noopener'>dépôt GitHub</a> concerné.",
+  disc: "Ces projets open source sont indépendants. Ils ne sont ni affiliés ni soutenus par les fournisseurs de données mentionnés (OFEV, OFPP/Alertswiss, SLF, SED, ElCom, OFEN, E-Control, transport.opendata.ch ou autres). Home Assistant est une marque de l'Open Home Foundation ; ces projets sont des intégrations communautaires indépendantes, sans lien avec l'Open Home Foundation. Le logiciel est fourni « tel quel », sans aucune garantie. Ne vous y fiez pas pour des décisions critiques de sécurité — suivez toujours les canaux officiels pour les alertes."
+},
+it: {
+  tagline: "Integrazioni Home Assistant gratuite e open source che portano i dati aperti ufficiali svizzeri (e austriaci) nella tua casa intelligente — fiumi e laghi, allerte ufficiali, bollettini valanghe, terremoti, trasporti pubblici, ricarica EV, parcheggi, prezzi dell'elettricità e altro.",
+  s_int: "Integrazioni", s_free: "Gratuito & open source", s_cloud: "Account cloud richiesti", s_lang: "Lingue (DE·EN·FR·IT)",
+  env_t: "Ambiente & sicurezza", env_s: "Dati in tempo reale dai servizi ufficiali svizzeri per l'ambiente e la protezione della popolazione.",
+  mob_t: "Mobilità", mob_s: "Trasporti pubblici, ricarica e parcheggi — in diretta e senza account cloud.",
+  ene_t: "Energia", ene_s: "Tariffe elettriche svizzere ufficiali e prezzi di riferimento solari per la tua dashboard energia.",
+  bld_t: "Automazione degli edifici", bld_s: "Controllo locale nativo per hardware svizzero di automazione degli edifici.",
+  hacs: "Aggiungi a HACS",
+  d1: "Temperatura dell'acqua, livello, portata e gradi di pericolo di piena in tempo reale per fiumi e laghi svizzeri, dalla rete idrologica ufficiale. Configura tutte le stazioni entro un raggio o una singola preferita — con dashboard creata automaticamente.",
+  src1: "Dati: Ufficio federale dell'ambiente (UFAM) via LINDAS",
+  d2: "Allerte ufficiali svizzere (Alertswiss) in Home Assistant: rileva se un poligono di allerta copre davvero la tua casa, mostra marcatori sulla mappa e include card ticker, elenco e dettaglio più una dashboard creata automaticamente.",
+  src2: "Dati: Ufficio federale della protezione della popolazione (Alertswiss)",
+  d3: "Il bollettino valanghe svizzero ufficiale per la tua posizione: grado di pericolo, esposizioni e quote con la corretta terminologia EAWS in quattro lingue. Supporta più località — casa, comprensorio sciistico, zona di gite.",
+  src3: "Dati: Istituto WSL per lo studio della neve e delle valanghe SLF (CC BY 4.0)",
+  d4: "I terremoti recenti in Svizzera sulla mappa integrata di Home Assistant, con un sensore riassuntivo (luogo · magnitudo · data), una scala di magnitudo comprensibile in quattro lingue e configurazione automatica della dashboard.",
+  src4: "Dati: Servizio Sismico Svizzero (SED) all'ETH di Zurigo",
+  d5: "Tabelloni partenze in tempo reale e collegamenti salvati porta a porta con binari, dettagli dei cambi e consultazione orari — con card Lovelace incluse e dati in tempo reale OJP 2.0 opzionali.",
+  src5: "Dati: transport.opendata.ch · Open Journey Planner (opentransportdata.swiss)",
+  d6: "Disponibilità in tempo reale delle stazioni di ricarica pubbliche in tutta la Svizzera: stato per sito con contatore di colonnine libere, preferiti con card create automaticamente, prezzi di ricarica dall'atlante federale dei prezzi e mappa inclusa.",
+  src6: "Dati: Ufficio federale dell'energia (ich-tanke-strom.ch)",
+  d7: "La controparte austriaca: disponibilità in tempo reale delle stazioni di ricarica pubbliche in Austria con preferiti e card Lovelace inclusa, basata sull'elenco ufficiale E-Control.",
+  src7: "Dati: E-Control / ladestellen.at",
+  d8: "Parcheggi liberi in tempo reale nelle città svizzere — Zurigo, Basilea, Winterthur, Berna e Frauenfeld — direttamente dai sistemi di guida ai parcheggi delle città, con sensori e marcatori sulla mappa.",
+  src8: "Dati: sistemi ufficiali cittadini di guida ai parcheggi (open data)",
+  d9: "La tua vera tariffa elettrica in Home Assistant — funziona con qualsiasi gestore di rete svizzero. Scegli comune, gestore e prodotto; le componenti energia e rete sono selezionabili separatamente e alimentano direttamente la dashboard energia.",
+  src9: "Dati: Commissione federale dell'energia elettrica (ElCom)",
+  d10: "Il prezzo di mercato di riferimento svizzero ufficiale per il solare (art. 15 OPEn) come sensore — sai quanto vale la tua energia solare immessa ogni trimestre, ideale per monitorare i ricavi dell'immissione.",
+  src10: "Dati: Ufficio federale dell'energia (UFE)",
+  d11: "Controllo locale completo del controller domotico Innoxel Master 3 — luci, dimmer, interruttori e tapparelle (inclusi i moduli di seconda generazione) tramite l'interfaccia SOAP nativa. Niente cloud, niente gateway.",
+  src11: "Compatibile con: Innoxel Master 3 (noxnetRemote SOAP)",
+  inst_t: "Installazione",
+  inst_intro: "Tutte le integrazioni si installano allo stesso modo tramite <a href='https://hacs.xyz' target='_blank' rel='noopener'>HACS</a> (Home Assistant Community Store):",
+  inst_1: "Fai clic su <strong>Aggiungi a HACS</strong> su una delle integrazioni qui sopra — il tuo Home Assistant si apre e aggiunge il repository automaticamente. (Oppure aggiungilo manualmente in HACS come repository personalizzato, tipo <em>Integrazione</em>.)",
+  inst_2: "Fai clic su <strong>Scarica</strong> in HACS e riavvia Home Assistant.",
+  inst_3: "Vai su <strong>Impostazioni → Dispositivi e servizi → Aggiungi integrazione</strong> e cerca il nome dell'integrazione. Una procedura guidata fa il resto.",
+  inst_note: "Ogni integrazione parla <strong>tedesco, inglese, francese e italiano</strong> e include un README dettagliato su GitHub.",
+  sup_t: "Ti piacciono queste integrazioni?",
+  sup_p1: "Tutto è gratuito e lo resterà. Sviluppo, test e manutenzione avvengono nel mio tempo libero — se un'integrazione ti è utile, un caffè tiene in vita gli aggiornamenti.",
+  sup_p2: "Hai trovato un bug o hai un'idea? Apri una issue nel rispettivo <a href='https://github.com/prusuino' target='_blank' rel='noopener'>repository GitHub</a>.",
+  disc: "Questi sono progetti open source indipendenti. Non sono affiliati, approvati o supportati dai fornitori di dati citati (UFAM, UFPP/Alertswiss, SLF, SED, ElCom, UFE, E-Control, transport.opendata.ch o altri). Home Assistant è un marchio della Open Home Foundation; questi progetti sono integrazioni indipendenti della community e non sono affiliati alla Open Home Foundation. Il software è fornito «così com'è», senza alcuna garanzia. Non fare affidamento su di esso per decisioni critiche per la sicurezza — segui sempre i canali ufficiali per le allerte."
+}
+};
+
+function setLang(lang) {
+  const t = I18N[lang] || I18N.en;
+  document.documentElement.lang = lang;
+  document.querySelector(".tagline").textContent = t.tagline;
+  const lbls = document.querySelectorAll(".hero-stats .lbl");
+  [t.s_int, t.s_free, t.s_cloud, t.s_lang].forEach((v, i) => { if (lbls[i]) lbls[i].textContent = v; });
+  const secs = [["environment","env_t","env_s"],["mobility","mob_t","mob_s"],["energy","ene_t","ene_s"],["building","bld_t","bld_s"]];
+  for (const [id, tk, sk] of secs) {
+    const sec = document.getElementById(id);
+    sec.querySelector(".section-title").innerHTML = "<span class='dot'></span>" + t[tk];
+    sec.querySelector(".section-sub").textContent = t[sk];
+  }
+  document.querySelector("#install .section-title").innerHTML = "<span class='dot'></span>" + t.inst_t;
+  document.querySelector("#support .section-title").innerHTML = "<span class='dot'></span>" + t.sup_t;
+  document.querySelectorAll(".card").forEach((card, i) => {
+    const n = i + 1;
+    if (t["d" + n]) card.querySelector(".desc").textContent = t["d" + n];
+    if (t["src" + n]) card.querySelector(".source").textContent = t["src" + n];
+    const btn = card.querySelector(".btn.primary");
+    if (btn) btn.textContent = t.hacs;
+  });
+  const box = document.querySelector("#install .install-box");
+  const ps = box.querySelectorAll(":scope > p");
+  ps[0].innerHTML = t.inst_intro;
+  ps[ps.length - 1].innerHTML = t.inst_note;
+  const lis = box.querySelectorAll("li");
+  [t.inst_1, t.inst_2, t.inst_3].forEach((v, i) => { if (lis[i]) lis[i].innerHTML = v; });
+  const sps = document.querySelectorAll("#support .support p");
+  sps[0].textContent = t.sup_p1;
+  sps[sps.length - 1].innerHTML = t.sup_p2;
+  document.querySelector("footer .disclaimer").textContent = t.disc;
+  document.querySelectorAll(".lang-switch button").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+}
+
+document.querySelectorAll(".lang-switch button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+let initial = null;
+try { initial = localStorage.getItem("lang"); } catch (e) {}
+if (!initial) {
+  const nav = (navigator.language || "en").slice(0, 2).toLowerCase();
+  initial = ["de", "fr", "it"].includes(nav) ? nav : "en";
+}
+setLang(initial);
+</script>
 
 </body>
 </html>
