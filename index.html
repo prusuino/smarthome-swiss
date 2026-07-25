@@ -124,14 +124,14 @@ p.section-sub { color: var(--text-soft); margin-bottom: 1.4rem; max-width: 46rem
   margin-bottom: .6rem;
 }
 .card-icon {
-  font-size: 1.75rem;
-  line-height: 1;
   flex: none;
   width: 48px; height: 48px;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--accent-soft);
+  background: #fff;
+  border: 1px solid var(--border);
   border-radius: 12px;
+  overflow: hidden;
 }
+.card-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card h3 { font-size: 1.06rem; font-weight: 700; line-height: 1.3; }
 .badges { margin-top: .3rem; display: flex; gap: .4rem; flex-wrap: wrap; }
 .badge {
@@ -245,7 +245,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
     <div class="card">
       <div class="card-head">
-        <div class="card-icon">🌊</div>
+        <div class="card-icon"><img src="assets/swiss_waters.png" alt="Swiss Waters icon"></div>
         <div>
           <h3>Swiss Waters</h3>
           <div class="badges"><span class="badge">v1.1.0</span><span class="badge neutral">FOEN / BAFU</span></div>
@@ -261,7 +261,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
     <div class="card">
       <div class="card-head">
-        <div class="card-icon">🚨</div>
+        <div class="card-icon"><img src="assets/swiss_public_alerts.png" alt="Swiss Public Alerts icon"></div>
         <div>
           <h3>Swiss Public Alerts</h3>
           <div class="badges"><span class="badge">v1.0.1</span><span class="badge neutral">Alertswiss</span></div>
@@ -277,7 +277,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
     <div class="card">
       <div class="card-head">
-        <div class="card-icon">🏔️</div>
+        <div class="card-icon"><img src="assets/slf_avalanche.png" alt="Swiss Avalanche Bulletin icon"></div>
         <div>
           <h3>Swiss Avalanche Bulletin</h3>
           <div class="badges"><span class="badge">v1.0.0</span><span class="badge neutral">SLF</span></div>
@@ -293,7 +293,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
     <div class="card">
       <div class="card-head">
-        <div class="card-icon">🌍</div>
+        <div class="card-icon"><img src="assets/sed_earthquakes.png" alt="Swiss Earthquakes icon"></div>
         <div>
           <h3>Swiss Earthquakes</h3>
           <div class="badges"><span class="badge">v1.2.0</span><span class="badge neutral">SED</span></div>
@@ -317,7 +317,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
     <div class="card">
       <div class="card-head">
-        <div class="card-icon">🚆</div>
+        <div class="card-icon"><img src="assets/swiss_transport.png" alt="Swiss Transport icon"></div>
         <div>
           <h3>Swiss Transport</h3>
           <div class="badges"><span class="badge">v1.2.1</span><span class="badge neutral">opendata.ch</span></div>
@@ -333,7 +333,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
     <div class="card">
       <div class="card-head">
-        <div class="card-icon">🔌</div>
+        <div class="card-icon"><img src="assets/ich_tanke_strom.png" alt="Swiss Charging Stations icon"></div>
         <div>
           <h3>Swiss Charging Stations</h3>
           <div class="badges"><span class="badge">v1.8.0</span><span class="badge neutral">ich-tanke-strom.ch</span></div>
@@ -349,7 +349,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
     <div class="card">
       <div class="card-head">
-        <div class="card-icon">⚡</div>
+        <div class="card-icon"><img src="assets/ladestellen_at.png" alt="Austrian Charging Stations icon"></div>
         <div>
           <h3>Austrian Charging Stations</h3>
           <div class="badges"><span class="badge">v1.1.4</span><span class="badge neutral">E-Control</span></div>
@@ -365,7 +365,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
     <div class="card">
       <div class="card-head">
-        <div class="card-icon">🅿️</div>
+        <div class="card-icon"><img src="assets/swiss_parking.png" alt="Swiss Parking icon"></div>
         <div>
           <h3>Swiss Parking</h3>
           <div class="badges"><span class="badge">v1.1.0</span><span class="badge neutral">City PLS feeds</span></div>
@@ -389,7 +389,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
     <div class="card">
       <div class="card-head">
-        <div class="card-icon">💡</div>
+        <div class="card-icon"><img src="assets/elcom_tariffs.png" alt="Swiss Electricity Price icon"></div>
         <div>
           <h3>Swiss Electricity Price</h3>
           <div class="badges"><span class="badge">v1.3.0</span><span class="badge neutral">ElCom</span></div>
@@ -405,7 +405,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
     <div class="card">
       <div class="card-head">
-        <div class="card-icon">☀️</div>
+        <div class="card-icon"><img src="assets/solar_reference_price.png" alt="Swiss Solar Reference Price icon"></div>
         <div>
           <h3>Swiss Solar Reference Price</h3>
           <div class="badges"><span class="badge">v1.1.0</span><span class="badge neutral">SFOE</span></div>
@@ -429,7 +429,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
     <div class="card">
       <div class="card-head">
-        <div class="card-icon">🏠</div>
+        <div class="card-icon"><img src="assets/innoxel.png" alt="Innoxel Master 3 icon"></div>
         <div>
           <h3>Innoxel Master 3</h3>
           <div class="badges"><span class="badge">v1.4.2</span><span class="badge neutral">Local SOAP</span></div>
