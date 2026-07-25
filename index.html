@@ -229,6 +229,18 @@ code {
 }
 .coffee-btn:hover { text-decoration: none; filter: brightness(1.05); }
 
+/* Community */
+.community-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff !important;
+  font-weight: 750;
+  padding: .7rem 1.5rem;
+  border-radius: 10px;
+  font-size: .95rem;
+}
+.community-btn:hover { text-decoration: none; filter: brightness(1.08); }
+
 /* Footer */
 footer {
   border-top: 1px solid var(--border);
@@ -486,6 +498,14 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
   </div>
 </section>
 
+<section id="community">
+  <div class="support">
+    <h2 class="section-title" style="justify-content:center;"><span class="dot"></span>Community</h2>
+    <p>Questions, ideas or want to show what you built? GitHub Discussions is the shared forum for all integrations on this page — in whichever language you prefer.</p>
+    <a class="community-btn" href="https://github.com/prusuino/smarthome-swiss/discussions" target="_blank" rel="noopener">💬 Join the discussion</a>
+  </div>
+</section>
+
 <section id="support">
   <div class="support">
     <h2 class="section-title" style="justify-content:center;"><span class="dot"></span>Enjoying these integrations?</h2>
@@ -543,6 +563,9 @@ en: {
   sup_t: "Enjoying these integrations?",
   sup_p1: "Everything here is free and always will be. Development, testing and maintenance happen in my spare time — if an integration is useful to you, a coffee keeps the updates coming.",
   sup_p2: "Found a bug or have an idea? Open an issue on the respective <a href='https://github.com/prusuino' target='_blank' rel='noopener'>GitHub repository</a>.",
+  com_t: "Community",
+  com_p: "Questions, ideas or want to show what you built? GitHub Discussions is the shared forum for all integrations on this page — in whichever language you prefer.",
+  com_btn: "Join the discussion",
   disc: "These are independent open-source projects. They are not affiliated with, endorsed by or supported by any of the data providers mentioned (FOEN, FOCP/Alertswiss, SLF, SED, ElCom, SFOE, E-Control, transport.opendata.ch or others). Home Assistant is a trademark of the Open Home Foundation; these projects are independent community integrations and are not affiliated with the Open Home Foundation. All software is provided \"as is\", without warranty of any kind. Do not rely on it for safety-critical decisions — always follow official channels for alerts and warnings."
 },
 de: {
@@ -584,6 +607,9 @@ de: {
   sup_t: "Gefallen dir diese Integrationen?",
   sup_p1: "Alles hier ist kostenlos und bleibt es auch. Entwicklung, Tests und Pflege passieren in meiner Freizeit — wenn dir eine Integration nützt, hält ein Kaffee die Updates am Laufen.",
   sup_p2: "Fehler gefunden oder eine Idee? Eröffne ein Issue im jeweiligen <a href='https://github.com/prusuino' target='_blank' rel='noopener'>GitHub-Repository</a>.",
+  com_t: "Community",
+  com_p: "Fragen, Ideen oder Lust zu zeigen, was du gebaut hast? GitHub Discussions ist das gemeinsame Forum für alle Integrationen auf dieser Seite — gerne auch auf Deutsch.",
+  com_btn: "Zur Diskussion",
   disc: "Dies sind unabhängige Open-Source-Projekte. Sie stehen in keiner Verbindung zu den genannten Datenanbietern (BAFU, BABS/Alertswiss, SLF, SED, ElCom, BFE, E-Control, transport.opendata.ch u.a.) und sind keine offiziellen Angebote dieser Stellen. Home Assistant ist eine Marke der Open Home Foundation; diese Projekte sind unabhängige Community-Integrationen und mit der Open Home Foundation nicht verbunden. Die Software wird ohne jegliche Gewährleistung bereitgestellt. Verlasse dich für sicherheitsrelevante Entscheidungen nicht darauf — befolge stets die offiziellen Kanäle für Warnungen."
 },
 fr: {
@@ -625,6 +651,9 @@ fr: {
   sup_t: "Ces intégrations vous plaisent ?",
   sup_p1: "Tout est gratuit et le restera. Le développement, les tests et la maintenance se font sur mon temps libre — si une intégration vous est utile, un café fait vivre les mises à jour.",
   sup_p2: "Un bug ou une idée ? Ouvrez une issue sur le <a href='https://github.com/prusuino' target='_blank' rel='noopener'>dépôt GitHub</a> concerné.",
+  com_t: "Communauté",
+  com_p: "Des questions, des idées ou envie de montrer ce que vous avez construit ? GitHub Discussions est le forum commun de toutes les intégrations de cette page — aussi en français.",
+  com_btn: "Rejoindre la discussion",
   disc: "Ces projets open source sont indépendants. Ils ne sont ni affiliés ni soutenus par les fournisseurs de données mentionnés (OFEV, OFPP/Alertswiss, SLF, SED, ElCom, OFEN, E-Control, transport.opendata.ch ou autres). Home Assistant est une marque de l'Open Home Foundation ; ces projets sont des intégrations communautaires indépendantes, sans lien avec l'Open Home Foundation. Le logiciel est fourni « tel quel », sans aucune garantie. Ne vous y fiez pas pour des décisions critiques de sécurité — suivez toujours les canaux officiels pour les alertes."
 },
 it: {
@@ -666,6 +695,9 @@ it: {
   sup_t: "Ti piacciono queste integrazioni?",
   sup_p1: "Tutto è gratuito e lo resterà. Sviluppo, test e manutenzione avvengono nel mio tempo libero — se un'integrazione ti è utile, un caffè tiene in vita gli aggiornamenti.",
   sup_p2: "Hai trovato un bug o hai un'idea? Apri una issue nel rispettivo <a href='https://github.com/prusuino' target='_blank' rel='noopener'>repository GitHub</a>.",
+  com_t: "Community",
+  com_p: "Domande, idee o voglia di mostrare cosa hai costruito? GitHub Discussions è il forum comune per tutte le integrazioni di questa pagina — anche in italiano.",
+  com_btn: "Partecipa alla discussione",
   disc: "Questi sono progetti open source indipendenti. Non sono affiliati, approvati o supportati dai fornitori di dati citati (UFAM, UFPP/Alertswiss, SLF, SED, ElCom, UFE, E-Control, transport.opendata.ch o altri). Home Assistant è un marchio della Open Home Foundation; questi progetti sono integrazioni indipendenti della community e non sono affiliati alla Open Home Foundation. Il software è fornito «così com'è», senza alcuna garanzia. Non fare affidamento su di esso per decisioni critiche per la sicurezza — segui sempre i canali ufficiali per le allerte."
 }
 };
@@ -684,6 +716,9 @@ function setLang(lang) {
   }
   document.querySelector("#install .section-title").innerHTML = "<span class='dot'></span>" + t.inst_t;
   document.querySelector("#support .section-title").innerHTML = "<span class='dot'></span>" + t.sup_t;
+  document.querySelector("#community .section-title").innerHTML = "<span class='dot'></span>" + t.com_t;
+  document.querySelector("#community .support p").textContent = t.com_p;
+  document.querySelector("#community .community-btn").textContent = "💬 " + t.com_btn;
   document.querySelectorAll(".card").forEach((card, i) => {
     const n = i + 1;
     if (t["d" + n]) card.querySelector(".desc").textContent = t["d" + n];
