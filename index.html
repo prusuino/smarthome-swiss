@@ -269,7 +269,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
   <h1>Smart Home Swiss</h1>
   <p class="tagline">Free, open-source Home Assistant integrations that bring official Swiss (and Austrian) open data into your smart home — rivers and lakes, public alerts, avalanche bulletins, earthquakes, public transport, EV charging, parking, electricity prices and more.</p>
   <div class="hero-stats">
-    <div><span class="num">13</span><span class="lbl">Integrations</span></div>
+    <div><span class="num">14</span><span class="lbl">Integrations</span></div>
     <div><span class="num">100%</span><span class="lbl">Free &amp; open source</span></div>
     <div><span class="num">0</span><span class="lbl">Cloud accounts needed</span></div>
     <div><span class="num">4</span><span class="lbl">Languages (DE·EN·FR·IT)</span></div>
@@ -368,7 +368,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
 <section id="mobility">
   <h2 class="section-title"><span class="dot"></span>Mobility</h2>
-  <p class="section-sub">Public transport, EV charging and parking — live and cloud-account-free.</p>
+  <p class="section-sub">Public transport, EV charging, parking and shared mobility — live and cloud-account-free.</p>
   <div class="grid">
 
     <div class="card">
@@ -424,7 +424,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
         <div class="card-icon"><img src="assets/swiss_parking.png" alt="Swiss Parking icon"></div>
         <div>
           <h3>Swiss Parking</h3>
-          <div class="badges"><span class="badge">v1.3.0</span><span class="badge neutral">City PLS feeds</span></div>
+          <div class="badges"><span class="badge">v1.3.1</span><span class="badge neutral">City PLS feeds</span></div>
         </div>
       </div>
       <p class="desc">Live free parking spaces in Swiss cities — Zürich, Basel, Winterthur, Bern and Frauenfeld — straight from each city's parking guidance system, with sensors and map markers.</p>
@@ -432,6 +432,22 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-actions">
         <a class="btn" href="https://github.com/prusuino/ha_swiss_parking" target="_blank" rel="noopener">GitHub</a>
         <a class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&repository=ha_swiss_parking&category=integration" target="_blank" rel="noopener">Add to HACS</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon"><img src="assets/swiss_shared_mobility.png" alt="Swiss Shared Mobility icon"></div>
+        <div>
+          <h3>Swiss Shared Mobility</h3>
+          <div class="badges"><span class="badge">v1.0.0</span><span class="badge neutral">REST API</span></div>
+        </div>
+      </div>
+      <p class="desc">Shared bikes, e-bikes, e-scooters, mopeds and cars available near you — around 45 Swiss providers in one place. Count per vehicle type within a radius, distance to the nearest vehicle, favourite stations such as a Mobility car-sharing location, and optional map markers.</p>
+      <div class="source">Data: Swiss Federal Office of Energy (sharedmobility.ch)</div>
+      <div class="card-actions">
+        <a class="btn" href="https://github.com/prusuino/ha_swiss_shared_mobility" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&repository=ha_swiss_shared_mobility&category=integration" target="_blank" rel="noopener">Add to HACS</a>
       </div>
     </div>
 
@@ -561,7 +577,7 @@ en: {
   tagline: "Free, open-source Home Assistant integrations that bring official Swiss (and Austrian) open data into your smart home — rivers and lakes, public alerts, avalanche bulletins, earthquakes, public transport, EV charging, parking, electricity prices and more.",
   s_int: "Integrations", s_free: "Free & open source", s_cloud: "Cloud accounts needed", s_lang: "Languages (DE·EN·FR·IT)",
   env_t: "Environment & Safety", env_s: "Live data from Switzerland's official environmental and civil-protection services.",
-  mob_t: "Mobility", mob_s: "Public transport, EV charging and parking — live and cloud-account-free.",
+  mob_t: "Mobility", mob_s: "Public transport, EV charging, parking and shared mobility — live and cloud-account-free.",
   ene_t: "Energy", ene_s: "Official Swiss electricity tariffs and solar feed-in reference prices for your energy dashboard.",
   bld_t: "Building Automation", bld_s: "Native local control for Swiss building automation hardware.",
   hacs: "Add to HACS",
@@ -584,14 +600,16 @@ en: {
   src8: "Data: E-Control / ladestellen.at",
   d9: "Live free parking spaces in Swiss cities — Zürich, Basel, Winterthur, Bern and Frauenfeld — straight from each city's parking guidance system, with sensors and map markers.",
   src9: "Data: official city parking guidance systems (open data)",
-  d10: "Your real electricity tariff in Home Assistant — works with any Swiss grid operator. Pick your municipality, operator and product; energy and grid components are selectable separately and feed directly into the Energy dashboard.",
-  src10: "Data: Federal Electricity Commission (ElCom)",
-  d11: "The official Swiss solar reference market price (Art. 15 EnFV) as a sensor — know what your exported solar energy is worth each quarter, ideal for feed-in revenue tracking.",
-  src11: "Data: Swiss Federal Office of Energy (SFOE)",
-  d12: "Full local control of the Innoxel Master 3 home automation controller — lights, dimmers, switches and covers (including second-generation blind modules) over the native SOAP interface. No cloud, no gateway.",
-  src12: "Works with: Innoxel Master 3 (noxnetRemote SOAP)",
-  d13: "The 30 digital contact inputs of an AK MODUL-BUS RD30 module as binary sensors — event-driven over a serial device server such as a Moxa NPort. Name the inputs and pick device classes in the UI; door contacts, water sensors, alarm panel outputs or pump status land directly in Home Assistant. Requires a serial-to-Ethernet device server — the RD30 alone has only an RS-232 port.",
-  src13: "Works with: AK MODUL-BUS RD30 via a serial device server (Moxa NPort 5110 tested)",
+  d10: "Shared bikes, e-bikes, e-scooters, mopeds and cars available near you — around 45 Swiss providers in one place. Count per vehicle type within a radius, distance to the nearest vehicle, favourite stations such as a Mobility car-sharing location, and optional map markers.",
+  src10: "Data: Swiss Federal Office of Energy (sharedmobility.ch)",
+  d11: "Your real electricity tariff in Home Assistant — works with any Swiss grid operator. Pick your municipality, operator and product; energy and grid components are selectable separately and feed directly into the Energy dashboard.",
+  src11: "Data: Federal Electricity Commission (ElCom)",
+  d12: "The official Swiss solar reference market price (Art. 15 EnFV) as a sensor — know what your exported solar energy is worth each quarter, ideal for feed-in revenue tracking.",
+  src12: "Data: Swiss Federal Office of Energy (SFOE)",
+  d13: "Full local control of the Innoxel Master 3 home automation controller — lights, dimmers, switches and covers (including second-generation blind modules) over the native SOAP interface. No cloud, no gateway.",
+  src13: "Works with: Innoxel Master 3 (noxnetRemote SOAP)",
+  d14: "The 30 digital contact inputs of an AK MODUL-BUS RD30 module as binary sensors — event-driven over a serial device server such as a Moxa NPort. Name the inputs and pick device classes in the UI; door contacts, water sensors, alarm panel outputs or pump status land directly in Home Assistant. Requires a serial-to-Ethernet device server — the RD30 alone has only an RS-232 port.",
+  src14: "Works with: AK MODUL-BUS RD30 via a serial device server (Moxa NPort 5110 tested)",
   inst_t: "How to install",
   inst_intro: "All integrations are installed via <a href='https://hacs.xyz' target='_blank' rel='noopener'>HACS</a> (Home Assistant Community Store). Ten of them are listed in the HACS default store, the others are added as custom repositories:",
   inst_1: "Integrations marked <strong>In HACS default store</strong>: open HACS in your Home Assistant, search for the integration name and download it. For the others, click <strong>Add to HACS</strong> on the card above — it opens your own Home Assistant and adds the repository automatically (or add it manually in HACS as a custom repository, type <em>Integration</em>).",
@@ -610,7 +628,7 @@ de: {
   tagline: "Kostenlose Open-Source-Integrationen für Home Assistant, die offizielle Schweizer (und österreichische) Open Data ins Smart Home bringen — Flüsse und Seen, Behördenwarnungen, Lawinenbulletins, Erdbeben, öffentlicher Verkehr, E-Ladestationen, Parkplätze, Strompreise und mehr.",
   s_int: "Integrationen", s_free: "Gratis & Open Source", s_cloud: "Cloud-Konten nötig", s_lang: "Sprachen (DE·EN·FR·IT)",
   env_t: "Umwelt & Sicherheit", env_s: "Live-Daten der offiziellen Schweizer Umwelt- und Bevölkerungsschutz-Dienste.",
-  mob_t: "Mobilität", mob_s: "ÖV, E-Ladestationen und Parkplätze — live und ohne Cloud-Konto.",
+  mob_t: "Mobilität", mob_s: "ÖV, E-Ladestationen, Parkplätze und Sharing — live und ohne Cloud-Konto.",
   ene_t: "Energie", ene_s: "Offizielle Schweizer Stromtarife und Solar-Referenzpreise für dein Energie-Dashboard.",
   bld_t: "Gebäudeautomation", bld_s: "Native lokale Steuerung für Schweizer Gebäudeautomations-Hardware.",
   hacs: "Zu HACS hinzufügen",
@@ -633,14 +651,16 @@ de: {
   src8: "Daten: E-Control / ladestellen.at",
   d9: "Live freie Parkplätze in Schweizer Städten — Zürich, Basel, Winterthur, Bern und Frauenfeld — direkt aus den städtischen Parkleitsystemen, mit Sensoren und Karten-Markern.",
   src9: "Daten: offizielle städtische Parkleitsysteme (Open Data)",
-  d10: "Dein echter Stromtarif in Home Assistant — funktioniert mit jedem Schweizer Netzbetreiber. Wähle Gemeinde, Betreiber und Produkt; Energie- und Netzkomponente sind separat wählbar und fliessen direkt ins Energie-Dashboard.",
-  src10: "Daten: Eidgenössische Elektrizitätskommission (ElCom)",
-  d11: "Der offizielle Schweizer Referenz-Marktpreis für Solarstrom (Art. 15 EnFV) als Sensor — wisse, was dein eingespeister Solarstrom pro Quartal wert ist, ideal fürs Einspeise-Ertragstracking.",
-  src11: "Daten: Bundesamt für Energie (BFE)",
-  d12: "Volle lokale Steuerung des Innoxel Master 3 — Lichter, Dimmer, Schalter und Storen (inklusive Storenmodule der zweiten Generation) über die native SOAP-Schnittstelle. Keine Cloud, kein Gateway.",
-  src12: "Kompatibel mit: Innoxel Master 3 (noxnetRemote SOAP)",
-  d13: "Die 30 digitalen Kontakteingänge eines AK MODUL-BUS RD30 als Binärsensoren — ereignisgesteuert über einen seriellen Geräteserver wie den Moxa NPort. Eingänge in der Oberfläche benennen und mit Geräteklasse versehen; Türkontakte, Wassermelder, Ausgänge der Alarmanlage oder Pumpenstatus landen direkt in Home Assistant. Setzt einen Seriell-zu-Ethernet-Geräteserver voraus — der RD30 allein hat nur eine RS-232-Schnittstelle.",
-  src13: "Kompatibel mit: AK MODUL-BUS RD30 über seriellen Geräteserver (getestet mit Moxa NPort 5110)",
+  d10: "Sharing-Velos, E-Bikes, E-Trottinette, Mopeds und Autos in deiner Nähe — rund 45 Schweizer Anbieter an einem Ort. Anzahl pro Fahrzeugtyp im Umkreis, Distanz zum nächsten Fahrzeug, Favoriten-Stationen wie ein Mobility-Standort und optionale Karten-Marker.",
+  src10: "Daten: Bundesamt für Energie (sharedmobility.ch)",
+  d11: "Dein echter Stromtarif in Home Assistant — funktioniert mit jedem Schweizer Netzbetreiber. Wähle Gemeinde, Betreiber und Produkt; Energie- und Netzkomponente sind separat wählbar und fliessen direkt ins Energie-Dashboard.",
+  src11: "Daten: Eidgenössische Elektrizitätskommission (ElCom)",
+  d12: "Der offizielle Schweizer Referenz-Marktpreis für Solarstrom (Art. 15 EnFV) als Sensor — wisse, was dein eingespeister Solarstrom pro Quartal wert ist, ideal fürs Einspeise-Ertragstracking.",
+  src12: "Daten: Bundesamt für Energie (BFE)",
+  d13: "Volle lokale Steuerung des Innoxel Master 3 — Lichter, Dimmer, Schalter und Storen (inklusive Storenmodule der zweiten Generation) über die native SOAP-Schnittstelle. Keine Cloud, kein Gateway.",
+  src13: "Kompatibel mit: Innoxel Master 3 (noxnetRemote SOAP)",
+  d14: "Die 30 digitalen Kontakteingänge eines AK MODUL-BUS RD30 als Binärsensoren — ereignisgesteuert über einen seriellen Geräteserver wie den Moxa NPort. Eingänge in der Oberfläche benennen und mit Geräteklasse versehen; Türkontakte, Wassermelder, Ausgänge der Alarmanlage oder Pumpenstatus landen direkt in Home Assistant. Setzt einen Seriell-zu-Ethernet-Geräteserver voraus — der RD30 allein hat nur eine RS-232-Schnittstelle.",
+  src14: "Kompatibel mit: AK MODUL-BUS RD30 über seriellen Geräteserver (getestet mit Moxa NPort 5110)",
   inst_t: "Installation",
   inst_intro: "Alle Integrationen werden via <a href='https://hacs.xyz' target='_blank' rel='noopener'>HACS</a> (Home Assistant Community Store) installiert. Zehn davon stehen im HACS-Standardkatalog, die übrigen werden als benutzerdefiniertes Repository hinzugefügt:",
   inst_1: "Integrationen mit dem Badge <strong>Im HACS-Standardkatalog</strong>: HACS in deinem Home Assistant öffnen, den Namen der Integration suchen und herunterladen. Bei den übrigen oben auf der Karte auf <strong>Zu HACS hinzufügen</strong> klicken — dein Home Assistant öffnet sich und fügt das Repository automatisch hinzu (oder manuell in HACS als benutzerdefiniertes Repository, Typ <em>Integration</em>).",
@@ -659,7 +679,7 @@ fr: {
   tagline: "Des intégrations Home Assistant gratuites et open source qui amènent les données ouvertes officielles suisses (et autrichiennes) dans votre maison connectée — rivières et lacs, alertes officielles, bulletins d'avalanches, séismes, transports publics, bornes de recharge, parkings, prix de l'électricité et plus encore.",
   s_int: "Intégrations", s_free: "Gratuit & open source", s_cloud: "Comptes cloud requis", s_lang: "Langues (DE·EN·FR·IT)",
   env_t: "Environnement & sécurité", env_s: "Données en direct des services officiels suisses de l'environnement et de la protection de la population.",
-  mob_t: "Mobilité", mob_s: "Transports publics, recharge et parking — en direct et sans compte cloud.",
+  mob_t: "Mobilité", mob_s: "Transports publics, recharge, parking et mobilité partagée — en direct et sans compte cloud.",
   ene_t: "Énergie", ene_s: "Tarifs suisses officiels de l'électricité et prix de référence solaire pour votre tableau de bord énergie.",
   bld_t: "Domotique", bld_s: "Contrôle local natif pour le matériel domotique suisse.",
   hacs: "Ajouter à HACS",
@@ -682,14 +702,16 @@ fr: {
   src8: "Données : E-Control / ladestellen.at",
   d9: "Places de parc libres en direct dans les villes suisses — Zurich, Bâle, Winterthour, Berne et Frauenfeld — directement depuis les systèmes de guidage au parking des villes, avec capteurs et marqueurs sur la carte.",
   src9: "Données : systèmes officiels de guidage au parking des villes (open data)",
-  d10: "Votre vrai tarif d'électricité dans Home Assistant — fonctionne avec tous les gestionnaires de réseau suisses. Choisissez commune, gestionnaire et produit ; les composantes énergie et réseau sont sélectionnables séparément et alimentent directement le tableau de bord énergie.",
-  src10: "Données : Commission fédérale de l'électricité (ElCom)",
-  d11: "Le prix de marché de référence suisse officiel pour le solaire (art. 15 OEneR) comme capteur — sachez ce que vaut votre énergie solaire injectée chaque trimestre, idéal pour suivre les revenus d'injection.",
-  src11: "Données : Office fédéral de l'énergie (OFEN)",
-  d12: "Contrôle local complet du contrôleur domotique Innoxel Master 3 — éclairages, variateurs, interrupteurs et stores (y compris les modules de stores de deuxième génération) via l'interface SOAP native. Sans cloud, sans passerelle.",
-  src12: "Compatible avec : Innoxel Master 3 (noxnetRemote SOAP)",
-  d13: "Les 30 entrées de contact numériques d'un module AK MODUL-BUS RD30 comme capteurs binaires — pilotés par événements via un serveur de port série tel que le Moxa NPort. Nommez les entrées et choisissez les classes d'appareil dans l'interface ; contacts de porte, détecteurs d'eau, sorties de centrale d'alarme ou état de pompe arrivent directement dans Home Assistant. Nécessite un serveur série-Ethernet — le RD30 seul n'a qu'un port RS-232.",
-  src13: "Compatible avec : AK MODUL-BUS RD30 via un serveur de port série (testé avec Moxa NPort 5110)",
+  d10: "Vélos, vélos électriques, trottinettes électriques, scooters et voitures en partage près de chez vous — environ 45 fournisseurs suisses réunis. Nombre par type de véhicule dans un rayon, distance jusqu'au véhicule le plus proche, stations favorites comme un emplacement Mobility et marqueurs de carte en option.",
+  src10: "Données : Office fédéral de l'énergie (sharedmobility.ch)",
+  d11: "Votre vrai tarif d'électricité dans Home Assistant — fonctionne avec tous les gestionnaires de réseau suisses. Choisissez commune, gestionnaire et produit ; les composantes énergie et réseau sont sélectionnables séparément et alimentent directement le tableau de bord énergie.",
+  src11: "Données : Commission fédérale de l'électricité (ElCom)",
+  d12: "Le prix de marché de référence suisse officiel pour le solaire (art. 15 OEneR) comme capteur — sachez ce que vaut votre énergie solaire injectée chaque trimestre, idéal pour suivre les revenus d'injection.",
+  src12: "Données : Office fédéral de l'énergie (OFEN)",
+  d13: "Contrôle local complet du contrôleur domotique Innoxel Master 3 — éclairages, variateurs, interrupteurs et stores (y compris les modules de stores de deuxième génération) via l'interface SOAP native. Sans cloud, sans passerelle.",
+  src13: "Compatible avec : Innoxel Master 3 (noxnetRemote SOAP)",
+  d14: "Les 30 entrées de contact numériques d'un module AK MODUL-BUS RD30 comme capteurs binaires — pilotés par événements via un serveur de port série tel que le Moxa NPort. Nommez les entrées et choisissez les classes d'appareil dans l'interface ; contacts de porte, détecteurs d'eau, sorties de centrale d'alarme ou état de pompe arrivent directement dans Home Assistant. Nécessite un serveur série-Ethernet — le RD30 seul n'a qu'un port RS-232.",
+  src14: "Compatible avec : AK MODUL-BUS RD30 via un serveur de port série (testé avec Moxa NPort 5110)",
   inst_t: "Installation",
   inst_intro: "Toutes les intégrations s'installent via <a href='https://hacs.xyz' target='_blank' rel='noopener'>HACS</a> (Home Assistant Community Store). Dix d'entre elles figurent dans le catalogue HACS par défaut, les autres s'ajoutent comme dépôt personnalisé :",
   inst_1: "Intégrations marquées <strong>Dans le catalogue HACS par défaut</strong> : ouvrez HACS dans votre Home Assistant, cherchez le nom de l'intégration et téléchargez-la. Pour les autres, cliquez sur <strong>Ajouter à HACS</strong> sur la carte ci-dessus — votre Home Assistant s'ouvre et ajoute le dépôt automatiquement (ou ajoutez-le manuellement dans HACS comme dépôt personnalisé, type <em>Intégration</em>).",
@@ -708,7 +730,7 @@ it: {
   tagline: "Integrazioni Home Assistant gratuite e open source che portano i dati aperti ufficiali svizzeri (e austriaci) nella tua casa intelligente — fiumi e laghi, allerte ufficiali, bollettini valanghe, terremoti, trasporti pubblici, ricarica EV, parcheggi, prezzi dell'elettricità e altro.",
   s_int: "Integrazioni", s_free: "Gratuito & open source", s_cloud: "Account cloud richiesti", s_lang: "Lingue (DE·EN·FR·IT)",
   env_t: "Ambiente & sicurezza", env_s: "Dati in tempo reale dai servizi ufficiali svizzeri per l'ambiente e la protezione della popolazione.",
-  mob_t: "Mobilità", mob_s: "Trasporti pubblici, ricarica e parcheggi — in diretta e senza account cloud.",
+  mob_t: "Mobilità", mob_s: "Trasporti pubblici, ricarica, parcheggi e sharing — in diretta e senza account cloud.",
   ene_t: "Energia", ene_s: "Tariffe elettriche svizzere ufficiali e prezzi di riferimento solari per la tua dashboard energia.",
   bld_t: "Automazione degli edifici", bld_s: "Controllo locale nativo per hardware svizzero di automazione degli edifici.",
   hacs: "Aggiungi a HACS",
@@ -731,14 +753,16 @@ it: {
   src8: "Dati: E-Control / ladestellen.at",
   d9: "Parcheggi liberi in tempo reale nelle città svizzere — Zurigo, Basilea, Winterthur, Berna e Frauenfeld — direttamente dai sistemi di guida ai parcheggi delle città, con sensori e marcatori sulla mappa.",
   src9: "Dati: sistemi ufficiali cittadini di guida ai parcheggi (open data)",
-  d10: "La tua vera tariffa elettrica in Home Assistant — funziona con qualsiasi gestore di rete svizzero. Scegli comune, gestore e prodotto; le componenti energia e rete sono selezionabili separatamente e alimentano direttamente la dashboard energia.",
-  src10: "Dati: Commissione federale dell'energia elettrica (ElCom)",
-  d11: "Il prezzo di mercato di riferimento svizzero ufficiale per il solare (art. 15 OPEn) come sensore — sai quanto vale la tua energia solare immessa ogni trimestre, ideale per monitorare i ricavi dell'immissione.",
-  src11: "Dati: Ufficio federale dell'energia (UFE)",
-  d12: "Controllo locale completo del controller domotico Innoxel Master 3 — luci, dimmer, interruttori e tapparelle (inclusi i moduli di seconda generazione) tramite l'interfaccia SOAP nativa. Niente cloud, niente gateway.",
-  src12: "Compatibile con: Innoxel Master 3 (noxnetRemote SOAP)",
-  d13: "I 30 ingressi a contatto digitali di un modulo AK MODUL-BUS RD30 come sensori binari — gestiti a eventi tramite un server seriale come il Moxa NPort. Assegna nomi e classi di dispositivo agli ingressi dall'interfaccia; contatti porta, rilevatori d'acqua, uscite della centrale d'allarme o stato pompa arrivano direttamente in Home Assistant. Richiede un server seriale-Ethernet — il solo RD30 dispone unicamente di una porta RS-232.",
-  src13: "Compatibile con: AK MODUL-BUS RD30 tramite server seriale (testato con Moxa NPort 5110)",
+  d10: "Bici, e-bike, monopattini elettrici, motorini e auto in condivisione vicino a te — circa 45 fornitori svizzeri in un unico posto. Numero per tipo di veicolo nel raggio, distanza dal veicolo più vicino, stazioni preferite come un posteggio Mobility e marcatori sulla mappa opzionali.",
+  src10: "Dati: Ufficio federale dell'energia (sharedmobility.ch)",
+  d11: "La tua vera tariffa elettrica in Home Assistant — funziona con qualsiasi gestore di rete svizzero. Scegli comune, gestore e prodotto; le componenti energia e rete sono selezionabili separatamente e alimentano direttamente la dashboard energia.",
+  src11: "Dati: Commissione federale dell'energia elettrica (ElCom)",
+  d12: "Il prezzo di mercato di riferimento svizzero ufficiale per il solare (art. 15 OPEn) come sensore — sai quanto vale la tua energia solare immessa ogni trimestre, ideale per monitorare i ricavi dell'immissione.",
+  src12: "Dati: Ufficio federale dell'energia (UFE)",
+  d13: "Controllo locale completo del controller domotico Innoxel Master 3 — luci, dimmer, interruttori e tapparelle (inclusi i moduli di seconda generazione) tramite l'interfaccia SOAP nativa. Niente cloud, niente gateway.",
+  src13: "Compatibile con: Innoxel Master 3 (noxnetRemote SOAP)",
+  d14: "I 30 ingressi a contatto digitali di un modulo AK MODUL-BUS RD30 come sensori binari — gestiti a eventi tramite un server seriale come il Moxa NPort. Assegna nomi e classi di dispositivo agli ingressi dall'interfaccia; contatti porta, rilevatori d'acqua, uscite della centrale d'allarme o stato pompa arrivano direttamente in Home Assistant. Richiede un server seriale-Ethernet — il solo RD30 dispone unicamente di una porta RS-232.",
+  src14: "Compatibile con: AK MODUL-BUS RD30 tramite server seriale (testato con Moxa NPort 5110)",
   inst_t: "Installazione",
   inst_intro: "Tutte le integrazioni si installano tramite <a href='https://hacs.xyz' target='_blank' rel='noopener'>HACS</a> (Home Assistant Community Store). Dieci di esse sono nel catalogo HACS predefinito, le altre si aggiungono come repository personalizzato:",
   inst_1: "Integrazioni con il badge <strong>Nel catalogo HACS predefinito</strong>: apri HACS nel tuo Home Assistant, cerca il nome dell'integrazione e scaricala. Per le altre fai clic su <strong>Aggiungi a HACS</strong> sulla scheda qui sopra — il tuo Home Assistant si apre e aggiunge il repository automaticamente (oppure aggiungilo manualmente in HACS come repository personalizzato, tipo <em>Integrazione</em>).",
