@@ -269,7 +269,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
   <h1>Smart Home Swiss</h1>
   <p class="tagline">Free, open-source Home Assistant integrations that bring official Swiss (and Austrian) open data into your smart home — rivers and lakes, public alerts, avalanche bulletins, earthquakes, public transport, EV charging, parking, electricity prices and more.</p>
   <div class="hero-stats">
-    <div><span class="num">14</span><span class="lbl">Integrations</span></div>
+    <div><span class="num">15</span><span class="lbl">Integrations</span></div>
     <div><span class="num">100%</span><span class="lbl">Free &amp; open source</span></div>
     <div><span class="num">0</span><span class="lbl">Cloud accounts needed</span></div>
     <div><span class="num">4</span><span class="lbl">Languages (DE·EN·FR·IT)</span></div>
@@ -534,6 +534,30 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
   </div>
 </section>
 
+<section id="leisure">
+  <h2 class="section-title"><span class="dot"></span>Leisure</h2>
+  <p class="section-sub">Lottery draws and your tickets — the fun side of Swiss data.</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon"><img src="assets/swiss_lottery.png" alt="Swiss Lottery icon"></div>
+        <div>
+          <h3>Swiss Lottery</h3>
+          <div class="badges"><span class="badge">v0.1.0</span><span class="badge neutral">Swisslos</span><span class="badge neutral">Dashboard card</span></div>
+        </div>
+      </div>
+      <p class="desc">The latest Swiss Lotto, EuroMillions and EuroDreams draws from Swisslos — numbers, lucky number, stars, Joker, Super-Star, jackpot and next draw — and your own tickets checked against every draw, with a bundled dashboard card that shows the drawn balls and highlights your hits.</p>
+      <div class="source">Data: published draw results of Swisslos (swisslos.ch)</div>
+      <div class="card-actions">
+        <a class="btn" href="https://github.com/prusuino/ha_swiss_lottery" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&repository=ha_swiss_lottery&category=integration" target="_blank" rel="noopener">Add to Marketplace</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section id="install">
   <h2 class="section-title"><span class="dot"></span>How to install</h2>
   <div class="install-box">
@@ -580,6 +604,7 @@ en: {
   mob_t: "Mobility", mob_s: "Public transport, EV charging, parking and shared mobility — live and cloud-account-free.",
   ene_t: "Energy", ene_s: "Official Swiss electricity tariffs and solar feed-in reference prices for your energy dashboard.",
   bld_t: "Building Automation", bld_s: "Native local control for Swiss building automation hardware.",
+  lei_t: "Leisure", lei_s: "Lottery draws and your tickets — the fun side of Swiss data.",
   hacs: "Add to Marketplace",
   hacs_def: "In Marketplace default catalog",
   d1: "Live water temperature, water level, discharge and flood danger levels for Swiss rivers and lakes from the official hydrological monitoring network. Set up all stations within a radius or pick a single favourite. Also covers the official bathing sites: bathing water quality per the EU Bathing Water Directive and the live bathing water temperature of the Zurich lake stations.",
@@ -610,6 +635,8 @@ en: {
   src13: "Works with: Innoxel Master 3 (noxnetRemote SOAP)",
   d14: "The 30 digital contact inputs of an AK MODUL-BUS RD30 module as binary sensors — event-driven over a serial device server such as a Moxa NPort. Name the inputs and pick device classes in the UI; door contacts, water sensors, alarm panel outputs or pump status land directly in Home Assistant. Requires a serial-to-Ethernet device server — the RD30 alone has only an RS-232 port.",
   src14: "Works with: AK MODUL-BUS RD30 via a serial device server (Moxa NPort 5110 tested)",
+  d15: "The latest Swiss Lotto, EuroMillions and EuroDreams draws from Swisslos — numbers, lucky number, stars, Joker, Super-Star, jackpot and next draw — and your own tickets checked against every draw, with a bundled dashboard card that shows the drawn balls and highlights your hits.",
+  src15: "Data: published draw results of Swisslos (swisslos.ch)",
   inst_t: "How to install",
   inst_intro: "All integrations are installed via the <a href='https://hacs.xyz/docs/marketplace/' target='_blank' rel='noopener'>Home Assistant Marketplace</a> (built into Home Assistant since 2026.11, formerly HACS). Eleven of them are listed in the Marketplace default catalog, the others are added as custom repositories:",
   inst_1: "Integrations marked <strong>In Marketplace default catalog</strong>: open <strong>Settings → Marketplace</strong> in your Home Assistant, search for the integration name and download it. For the others, click <strong>Add to Marketplace</strong> on the card above — it opens your own Home Assistant and adds the repository automatically (or add it manually in the Marketplace as a custom repository, type <em>Integration</em>).",
@@ -631,6 +658,7 @@ de: {
   mob_t: "Mobilität", mob_s: "ÖV, E-Ladestationen, Parkplätze und Sharing — live und ohne Cloud-Konto.",
   ene_t: "Energie", ene_s: "Offizielle Schweizer Stromtarife und Solar-Referenzpreise für dein Energie-Dashboard.",
   bld_t: "Gebäudeautomation", bld_s: "Native lokale Steuerung für Schweizer Gebäudeautomations-Hardware.",
+  lei_t: "Freizeit", lei_s: "Lottoziehungen und deine Tipps — die unterhaltsame Seite Schweizer Daten.",
   hacs: "Zum Marketplace hinzufügen",
   hacs_def: "Im Marketplace-Standardkatalog",
   d1: "Live-Wassertemperatur, Pegel, Abfluss und Hochwasser-Gefahrenstufen für Schweizer Flüsse und Seen aus dem offiziellen hydrologischen Messnetz. Richte alle Stationen im Umkreis oder einen einzelnen Favoriten ein. Deckt neu auch die offiziellen Badestellen ab: Badewasserqualität nach EU-Badegewässerrichtlinie und die Live-Badewassertemperatur der Zürichsee-Stationen.",
@@ -661,6 +689,8 @@ de: {
   src13: "Kompatibel mit: Innoxel Master 3 (noxnetRemote SOAP)",
   d14: "Die 30 digitalen Kontakteingänge eines AK MODUL-BUS RD30 als Binärsensoren — ereignisgesteuert über einen seriellen Geräteserver wie den Moxa NPort. Eingänge in der Oberfläche benennen und mit Geräteklasse versehen; Türkontakte, Wassermelder, Ausgänge der Alarmanlage oder Pumpenstatus landen direkt in Home Assistant. Setzt einen Seriell-zu-Ethernet-Geräteserver voraus — der RD30 allein hat nur eine RS-232-Schnittstelle.",
   src14: "Kompatibel mit: AK MODUL-BUS RD30 über seriellen Geräteserver (getestet mit Moxa NPort 5110)",
+  d15: "Die aktuellen Ziehungen von Swiss Lotto, EuroMillions und EuroDreams von Swisslos — Zahlen, Glückszahl, Sterne, Joker, Super-Star, Jackpot und nächste Ziehung — und deine eigenen Tipps, bei jeder Ziehung geprüft, mit einer mitgelieferten Dashboard-Karte, die die gezogenen Kugeln zeigt und deine Treffer hervorhebt.",
+  src15: "Daten: veröffentlichte Ziehungsergebnisse von Swisslos (swisslos.ch)",
   inst_t: "Installation",
   inst_intro: "Alle Integrationen werden über den <a href='https://hacs.xyz/docs/marketplace/' target='_blank' rel='noopener'>Home Assistant Marketplace</a> (seit Home Assistant 2026.11 eingebaut, früher HACS) installiert. Elf davon stehen im Marketplace-Standardkatalog, die übrigen werden als benutzerdefiniertes Repository hinzugefügt:",
   inst_1: "Integrationen mit dem Badge <strong>Im Marketplace-Standardkatalog</strong>: <strong>Einstellungen → Marketplace</strong> in deinem Home Assistant öffnen, den Namen der Integration suchen und herunterladen. Bei den übrigen oben auf der Karte auf <strong>Zum Marketplace hinzufügen</strong> klicken — dein Home Assistant öffnet sich und fügt das Repository automatisch hinzu (oder manuell im Marketplace als benutzerdefiniertes Repository, Typ <em>Integration</em>).",
@@ -682,6 +712,7 @@ fr: {
   mob_t: "Mobilité", mob_s: "Transports publics, recharge, parking et mobilité partagée — en direct et sans compte cloud.",
   ene_t: "Énergie", ene_s: "Tarifs suisses officiels de l'électricité et prix de référence solaire pour votre tableau de bord énergie.",
   bld_t: "Domotique", bld_s: "Contrôle local natif pour le matériel domotique suisse.",
+  lei_t: "Loisirs", lei_s: "Tirages de loterie et vos grilles — le côté ludique des données suisses.",
   hacs: "Ajouter au Marketplace",
   hacs_def: "Dans le catalogue Marketplace par défaut",
   d1: "Température de l'eau, niveau, débit et degrés de danger de crue en direct pour les rivières et lacs suisses, depuis le réseau hydrologique officiel. Configurez toutes les stations dans un rayon donné ou une seule favorite. Couvre désormais aussi les sites de baignade officiels : qualité de l'eau de baignade selon la directive européenne et température de baignade en direct des stations du lac de Zurich.",
@@ -712,6 +743,8 @@ fr: {
   src13: "Compatible avec : Innoxel Master 3 (noxnetRemote SOAP)",
   d14: "Les 30 entrées de contact numériques d'un module AK MODUL-BUS RD30 comme capteurs binaires — pilotés par événements via un serveur de port série tel que le Moxa NPort. Nommez les entrées et choisissez les classes d'appareil dans l'interface ; contacts de porte, détecteurs d'eau, sorties de centrale d'alarme ou état de pompe arrivent directement dans Home Assistant. Nécessite un serveur série-Ethernet — le RD30 seul n'a qu'un port RS-232.",
   src14: "Compatible avec : AK MODUL-BUS RD30 via un serveur de port série (testé avec Moxa NPort 5110)",
+  d15: "Les derniers tirages Swiss Lotto, EuroMillions et EuroDreams de Swisslos — numéros, numéro chance, étoiles, Joker, Super-Star, jackpot et prochain tirage — et vos propres grilles vérifiées à chaque tirage, avec une carte de tableau de bord intégrée qui affiche les boules tirées et met vos bons numéros en évidence.",
+  src15: "Données : résultats de tirage publiés par Swisslos (swisslos.ch)",
   inst_t: "Installation",
   inst_intro: "Toutes les intégrations s'installent via le <a href='https://hacs.xyz/docs/marketplace/' target='_blank' rel='noopener'>Home Assistant Marketplace</a> (intégré à Home Assistant depuis 2026.11, anciennement HACS). Onze d'entre elles figurent dans le catalogue Marketplace par défaut, les autres s'ajoutent comme dépôt personnalisé :",
   inst_1: "Intégrations marquées <strong>Dans le catalogue Marketplace par défaut</strong> : ouvrez <strong>Paramètres → Marketplace</strong> dans votre Home Assistant, cherchez le nom de l'intégration et téléchargez-la. Pour les autres, cliquez sur <strong>Ajouter au Marketplace</strong> sur la carte ci-dessus — votre Home Assistant s'ouvre et ajoute le dépôt automatiquement (ou ajoutez-le manuellement dans le Marketplace comme dépôt personnalisé, type <em>Intégration</em>).",
@@ -733,6 +766,7 @@ it: {
   mob_t: "Mobilità", mob_s: "Trasporti pubblici, ricarica, parcheggi e sharing — in diretta e senza account cloud.",
   ene_t: "Energia", ene_s: "Tariffe elettriche svizzere ufficiali e prezzi di riferimento solari per la tua dashboard energia.",
   bld_t: "Automazione degli edifici", bld_s: "Controllo locale nativo per hardware svizzero di automazione degli edifici.",
+  lei_t: "Tempo libero", lei_s: "Estrazioni del lotto e le tue schedine — il lato divertente dei dati svizzeri.",
   hacs: "Aggiungi al Marketplace",
   hacs_def: "Nel catalogo Marketplace predefinito",
   d1: "Temperatura dell'acqua, livello, portata e gradi di pericolo di piena in tempo reale per fiumi e laghi svizzeri, dalla rete idrologica ufficiale. Configura tutte le stazioni entro un raggio o una singola preferita. Ora copre anche le zone di balneazione ufficiali: qualità dell'acqua di balneazione secondo la direttiva UE e temperatura di balneazione in tempo reale delle stazioni del lago di Zurigo.",
@@ -763,6 +797,8 @@ it: {
   src13: "Compatibile con: Innoxel Master 3 (noxnetRemote SOAP)",
   d14: "I 30 ingressi a contatto digitali di un modulo AK MODUL-BUS RD30 come sensori binari — gestiti a eventi tramite un server seriale come il Moxa NPort. Assegna nomi e classi di dispositivo agli ingressi dall'interfaccia; contatti porta, rilevatori d'acqua, uscite della centrale d'allarme o stato pompa arrivano direttamente in Home Assistant. Richiede un server seriale-Ethernet — il solo RD30 dispone unicamente di una porta RS-232.",
   src14: "Compatibile con: AK MODUL-BUS RD30 tramite server seriale (testato con Moxa NPort 5110)",
+  d15: "Le ultime estrazioni di Swiss Lotto, EuroMillions ed EuroDreams di Swisslos — numeri, numero fortunato, stelle, Joker, Super-Star, jackpot e prossima estrazione — e le tue schedine verificate a ogni estrazione, con una scheda per la dashboard inclusa che mostra le palline estratte ed evidenzia i tuoi numeri vincenti.",
+  src15: "Dati: risultati delle estrazioni pubblicati da Swisslos (swisslos.ch)",
   inst_t: "Installazione",
   inst_intro: "Tutte le integrazioni si installano tramite il <a href='https://hacs.xyz/docs/marketplace/' target='_blank' rel='noopener'>Home Assistant Marketplace</a> (integrato in Home Assistant dal 2026.11, in precedenza HACS). Undici di esse sono nel catalogo Marketplace predefinito, le altre si aggiungono come repository personalizzato:",
   inst_1: "Integrazioni con il badge <strong>Nel catalogo Marketplace predefinito</strong>: apri <strong>Impostazioni → Marketplace</strong> nel tuo Home Assistant, cerca il nome dell'integrazione e scaricala. Per le altre fai clic su <strong>Aggiungi al Marketplace</strong> sulla scheda qui sopra — il tuo Home Assistant si apre e aggiunge il repository automaticamente (oppure aggiungilo manualmente nel Marketplace come repository personalizzato, tipo <em>Integrazione</em>).",
@@ -785,7 +821,7 @@ function setLang(lang) {
   document.querySelector(".tagline").textContent = t.tagline;
   const lbls = document.querySelectorAll(".hero-stats .lbl");
   [t.s_int, t.s_free, t.s_cloud, t.s_lang].forEach((v, i) => { if (lbls[i]) lbls[i].textContent = v; });
-  const secs = [["environment","env_t","env_s"],["mobility","mob_t","mob_s"],["energy","ene_t","ene_s"],["building","bld_t","bld_s"]];
+  const secs = [["environment","env_t","env_s"],["mobility","mob_t","mob_s"],["energy","ene_t","ene_s"],["building","bld_t","bld_s"],["leisure","lei_t","lei_s"]];
   for (const [id, tk, sk] of secs) {
     const sec = document.getElementById(id);
     sec.querySelector(".section-title").innerHTML = "<span class='dot'></span>" + t[tk];
