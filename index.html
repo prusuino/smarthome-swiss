@@ -472,7 +472,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
 
 <section id="energy">
   <h2 class="section-title"><span class="dot"></span>Energy</h2>
-  <p class="section-sub">Official Swiss electricity tariffs and solar feed-in reference prices for your energy dashboard.</p>
+  <p class="section-sub">Official Swiss electricity tariffs, solar feed-in reference prices and a PV production forecast for your energy dashboard.</p>
   <div class="grid">
 
     <div class="card">
@@ -528,6 +528,22 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-actions">
         <a class="btn" href="https://github.com/prusuino/ha_innoxel_master3" target="_blank" rel="noopener">GitHub</a>
         <a class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&repository=ha_innoxel_master3&category=integration" target="_blank" rel="noopener">Add to Marketplace</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon"><img src="assets/swiss_solar_forecast.png" alt="Swiss Solar Forecast icon"></div>
+        <div>
+          <h3>Swiss Solar Forecast</h3>
+          <div class="badges"><span class="badge">v0.1.0</span><span class="badge neutral">MeteoSwiss</span><span class="badge neutral">Sonnendach</span></div>
+        </div>
+      </div>
+      <p class="desc">PV production forecast from the MeteoSwiss local forecast: global and diffuse radiation, hour by hour for nine days, projected on your roof planes. Pick the planes from the Sonnendach solar cadastre by address or map marker, enter the figures, and the plant appears in the energy dashboard's solar forecast — no account, no API key.</p>
+      <div class="source">Data: MeteoSwiss local forecast (open data, CC BY 4.0) · Sonnendach, Swiss Federal Office of Energy (SFOE)</div>
+      <div class="card-actions">
+        <a class="btn" href="https://github.com/prusuino/ha_swiss_solar_forecast" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&repository=ha_swiss_solar_forecast&category=integration" target="_blank" rel="noopener">Add to Marketplace</a>
       </div>
     </div>
 
@@ -618,7 +634,7 @@ en: {
   s_int: "Integrations", s_free: "Free & open source", s_cloud: "Cloud accounts needed", s_lang: "Languages (DE·EN·FR·IT)",
   env_t: "Environment & Safety", env_s: "Live data from Switzerland's official environmental and civil-protection services.",
   mob_t: "Mobility", mob_s: "Public transport, EV charging, parking and shared mobility — live and cloud-account-free.",
-  ene_t: "Energy", ene_s: "Official Swiss electricity tariffs and solar feed-in reference prices for your energy dashboard.",
+  ene_t: "Energy", ene_s: "Official Swiss electricity tariffs, solar feed-in reference prices and a PV production forecast for your energy dashboard.",
   bld_t: "Building Automation", bld_s: "Native local control for Swiss building automation hardware.",
   lei_t: "Leisure", lei_s: "Lottery draws and your tickets — the fun side of Swiss data.",
   hacs: "Add to Marketplace",
@@ -649,12 +665,14 @@ en: {
   src12: "Data: Federal Electricity Commission (ElCom)",
   d13: "The official Swiss solar reference market price (Art. 15 EnFV) as a sensor — know what your exported solar energy is worth each quarter, ideal for feed-in revenue tracking.",
   src13: "Data: Swiss Federal Office of Energy (SFOE)",
-  d14: "Full local control of the Innoxel Master 3 home automation controller — lights, dimmers, switches and covers (including second-generation blind modules) over the native SOAP interface. No cloud, no gateway.",
-  src14: "Works with: Innoxel Master 3 (noxnetRemote SOAP)",
-  d15: "The 30 digital contact inputs of an AK MODUL-BUS RD30 module as binary sensors — event-driven over a serial device server such as a Moxa NPort. Name the inputs and pick device classes in the UI; door contacts, water sensors, alarm panel outputs or pump status land directly in Home Assistant. Requires a serial-to-Ethernet device server — the RD30 alone has only an RS-232 port.",
-  src15: "Works with: AK MODUL-BUS RD30 via a serial device server (Moxa NPort 5110 tested)",
-  d16: "The latest Swiss Lotto, EuroMillions and EuroDreams draws from Swisslos — numbers, lucky number, stars, Joker, Super-Star, jackpot and next draw — and your own tickets checked against every draw, with a bundled dashboard card that shows the drawn balls and highlights your hits.",
-  src16: "Data: published draw results of Swisslos (swisslos.ch)",
+  d14: "PV production forecast from the MeteoSwiss local forecast: global and diffuse radiation, hour by hour for nine days, projected on your roof planes. Pick the planes from the Sonnendach solar cadastre by address or map marker, enter the figures, and the plant appears in the energy dashboard's solar forecast — no account, no API key.",
+  src14: "Data: MeteoSwiss local forecast (open data, CC BY 4.0) · Sonnendach, Swiss Federal Office of Energy (SFOE)",
+  d15: "Full local control of the Innoxel Master 3 home automation controller — lights, dimmers, switches and covers (including second-generation blind modules) over the native SOAP interface. No cloud, no gateway.",
+  src15: "Works with: Innoxel Master 3 (noxnetRemote SOAP)",
+  d16: "The 30 digital contact inputs of an AK MODUL-BUS RD30 module as binary sensors — event-driven over a serial device server such as a Moxa NPort. Name the inputs and pick device classes in the UI; door contacts, water sensors, alarm panel outputs or pump status land directly in Home Assistant. Requires a serial-to-Ethernet device server — the RD30 alone has only an RS-232 port.",
+  src16: "Works with: AK MODUL-BUS RD30 via a serial device server (Moxa NPort 5110 tested)",
+  d17: "The latest Swiss Lotto, EuroMillions and EuroDreams draws from Swisslos — numbers, lucky number, stars, Joker, Super-Star, jackpot and next draw — and your own tickets checked against every draw, with a bundled dashboard card that shows the drawn balls and highlights your hits.",
+  src17: "Data: published draw results of Swisslos (swisslos.ch)",
   inst_t: "How to install",
   inst_intro: "All integrations are installed via the <a href='https://hacs.xyz/docs/marketplace/' target='_blank' rel='noopener'>Home Assistant Marketplace</a> (built into Home Assistant since 2026.11, formerly HACS). Eleven of them are listed in the Marketplace default catalog, the others are added as custom repositories:",
   inst_1: "Integrations marked <strong>In Marketplace default catalog</strong>: open <strong>Settings → Marketplace</strong> in your Home Assistant, search for the integration name and download it. For the others, click <strong>Add to Marketplace</strong> on the card above — it opens your own Home Assistant and adds the repository automatically (or add it manually in the Marketplace as a custom repository, type <em>Integration</em>).",
@@ -705,12 +723,14 @@ de: {
   src12: "Daten: Eidgenössische Elektrizitätskommission (ElCom)",
   d13: "Der offizielle Schweizer Referenz-Marktpreis für Solarstrom (Art. 15 EnFV) als Sensor — wisse, was dein eingespeister Solarstrom pro Quartal wert ist, ideal fürs Einspeise-Ertragstracking.",
   src13: "Daten: Bundesamt für Energie (BFE)",
-  d14: "Volle lokale Steuerung des Innoxel Master 3 — Lichter, Dimmer, Schalter und Storen (inklusive Storenmodule der zweiten Generation) über die native SOAP-Schnittstelle. Keine Cloud, kein Gateway.",
-  src14: "Kompatibel mit: Innoxel Master 3 (noxnetRemote SOAP)",
-  d15: "Die 30 digitalen Kontakteingänge eines AK MODUL-BUS RD30 als Binärsensoren — ereignisgesteuert über einen seriellen Geräteserver wie den Moxa NPort. Eingänge in der Oberfläche benennen und mit Geräteklasse versehen; Türkontakte, Wassermelder, Ausgänge der Alarmanlage oder Pumpenstatus landen direkt in Home Assistant. Setzt einen Seriell-zu-Ethernet-Geräteserver voraus — der RD30 allein hat nur eine RS-232-Schnittstelle.",
-  src15: "Kompatibel mit: AK MODUL-BUS RD30 über seriellen Geräteserver (getestet mit Moxa NPort 5110)",
-  d16: "Die aktuellen Ziehungen von Swiss Lotto, EuroMillions und EuroDreams von Swisslos — Zahlen, Glückszahl, Sterne, Joker, Super-Star, Jackpot und nächste Ziehung — und deine eigenen Tipps, bei jeder Ziehung geprüft, mit einer mitgelieferten Dashboard-Karte, die die gezogenen Kugeln zeigt und deine Treffer hervorhebt.",
-  src16: "Daten: veröffentlichte Ziehungsergebnisse von Swisslos (swisslos.ch)",
+  d14: "PV-Ertragsprognose aus der MeteoSchweiz-Lokalprognose: Global- und Diffusstrahlung, stündlich für neun Tage, umgerechnet auf deine Dachflächen. Die Flächen wählst du per Adresse oder Kartenmarker aus dem Sonnendach-Kataster, trägst die Werte ein, und die Anlage erscheint als Solarprognose im Energie-Dashboard – ohne Konto, ohne API-Schlüssel.",
+  src14: "Daten: MeteoSchweiz-Lokalprognose (Open Data, CC BY 4.0) · Sonnendach, Bundesamt für Energie BFE",
+  d15: "Volle lokale Steuerung des Innoxel Master 3 — Lichter, Dimmer, Schalter und Storen (inklusive Storenmodule der zweiten Generation) über die native SOAP-Schnittstelle. Keine Cloud, kein Gateway.",
+  src15: "Kompatibel mit: Innoxel Master 3 (noxnetRemote SOAP)",
+  d16: "Die 30 digitalen Kontakteingänge eines AK MODUL-BUS RD30 als Binärsensoren — ereignisgesteuert über einen seriellen Geräteserver wie den Moxa NPort. Eingänge in der Oberfläche benennen und mit Geräteklasse versehen; Türkontakte, Wassermelder, Ausgänge der Alarmanlage oder Pumpenstatus landen direkt in Home Assistant. Setzt einen Seriell-zu-Ethernet-Geräteserver voraus — der RD30 allein hat nur eine RS-232-Schnittstelle.",
+  src16: "Kompatibel mit: AK MODUL-BUS RD30 über seriellen Geräteserver (getestet mit Moxa NPort 5110)",
+  d17: "Die aktuellen Ziehungen von Swiss Lotto, EuroMillions und EuroDreams von Swisslos — Zahlen, Glückszahl, Sterne, Joker, Super-Star, Jackpot und nächste Ziehung — und deine eigenen Tipps, bei jeder Ziehung geprüft, mit einer mitgelieferten Dashboard-Karte, die die gezogenen Kugeln zeigt und deine Treffer hervorhebt.",
+  src17: "Daten: veröffentlichte Ziehungsergebnisse von Swisslos (swisslos.ch)",
   inst_t: "Installation",
   inst_intro: "Alle Integrationen werden über den <a href='https://hacs.xyz/docs/marketplace/' target='_blank' rel='noopener'>Home Assistant Marketplace</a> (seit Home Assistant 2026.11 eingebaut, früher HACS) installiert. Elf davon stehen im Marketplace-Standardkatalog, die übrigen werden als benutzerdefiniertes Repository hinzugefügt:",
   inst_1: "Integrationen mit dem Badge <strong>Im Marketplace-Standardkatalog</strong>: <strong>Einstellungen → Marketplace</strong> in deinem Home Assistant öffnen, den Namen der Integration suchen und herunterladen. Bei den übrigen oben auf der Karte auf <strong>Zum Marketplace hinzufügen</strong> klicken — dein Home Assistant öffnet sich und fügt das Repository automatisch hinzu (oder manuell im Marketplace als benutzerdefiniertes Repository, Typ <em>Integration</em>).",
@@ -761,12 +781,14 @@ fr: {
   src12: "Données : Commission fédérale de l'électricité (ElCom)",
   d13: "Le prix de marché de référence suisse officiel pour le solaire (art. 15 OEneR) comme capteur — sachez ce que vaut votre énergie solaire injectée chaque trimestre, idéal pour suivre les revenus d'injection.",
   src13: "Données : Office fédéral de l'énergie (OFEN)",
-  d14: "Contrôle local complet du contrôleur domotique Innoxel Master 3 — éclairages, variateurs, interrupteurs et stores (y compris les modules de stores de deuxième génération) via l'interface SOAP native. Sans cloud, sans passerelle.",
-  src14: "Compatible avec : Innoxel Master 3 (noxnetRemote SOAP)",
-  d15: "Les 30 entrées de contact numériques d'un module AK MODUL-BUS RD30 comme capteurs binaires — pilotés par événements via un serveur de port série tel que le Moxa NPort. Nommez les entrées et choisissez les classes d'appareil dans l'interface ; contacts de porte, détecteurs d'eau, sorties de centrale d'alarme ou état de pompe arrivent directement dans Home Assistant. Nécessite un serveur série-Ethernet — le RD30 seul n'a qu'un port RS-232.",
-  src15: "Compatible avec : AK MODUL-BUS RD30 via un serveur de port série (testé avec Moxa NPort 5110)",
-  d16: "Les derniers tirages Swiss Lotto, EuroMillions et EuroDreams de Swisslos — numéros, numéro chance, étoiles, Joker, Super-Star, jackpot et prochain tirage — et vos propres grilles vérifiées à chaque tirage, avec une carte de tableau de bord intégrée qui affiche les boules tirées et met vos bons numéros en évidence.",
-  src16: "Données : résultats de tirage publiés par Swisslos (swisslos.ch)",
+  d14: "Prévision de production PV à partir de la prévision locale de MétéoSuisse : rayonnement global et diffus, heure par heure sur neuf jours, projeté sur vos pans de toit. Choisissez les pans dans le cadastre solaire Toitsolaire par adresse ou marqueur, saisissez les valeurs, et l'installation apparaît dans la prévision solaire du tableau de bord énergie – sans compte, sans clé API.",
+  src14: "Données : prévision locale MétéoSuisse (open data, CC BY 4.0) · Toitsolaire, Office fédéral de l'énergie OFEN",
+  d15: "Contrôle local complet du contrôleur domotique Innoxel Master 3 — éclairages, variateurs, interrupteurs et stores (y compris les modules de stores de deuxième génération) via l'interface SOAP native. Sans cloud, sans passerelle.",
+  src15: "Compatible avec : Innoxel Master 3 (noxnetRemote SOAP)",
+  d16: "Les 30 entrées de contact numériques d'un module AK MODUL-BUS RD30 comme capteurs binaires — pilotés par événements via un serveur de port série tel que le Moxa NPort. Nommez les entrées et choisissez les classes d'appareil dans l'interface ; contacts de porte, détecteurs d'eau, sorties de centrale d'alarme ou état de pompe arrivent directement dans Home Assistant. Nécessite un serveur série-Ethernet — le RD30 seul n'a qu'un port RS-232.",
+  src16: "Compatible avec : AK MODUL-BUS RD30 via un serveur de port série (testé avec Moxa NPort 5110)",
+  d17: "Les derniers tirages Swiss Lotto, EuroMillions et EuroDreams de Swisslos — numéros, numéro chance, étoiles, Joker, Super-Star, jackpot et prochain tirage — et vos propres grilles vérifiées à chaque tirage, avec une carte de tableau de bord intégrée qui affiche les boules tirées et met vos bons numéros en évidence.",
+  src17: "Données : résultats de tirage publiés par Swisslos (swisslos.ch)",
   inst_t: "Installation",
   inst_intro: "Toutes les intégrations s'installent via le <a href='https://hacs.xyz/docs/marketplace/' target='_blank' rel='noopener'>Home Assistant Marketplace</a> (intégré à Home Assistant depuis 2026.11, anciennement HACS). Onze d'entre elles figurent dans le catalogue Marketplace par défaut, les autres s'ajoutent comme dépôt personnalisé :",
   inst_1: "Intégrations marquées <strong>Dans le catalogue Marketplace par défaut</strong> : ouvrez <strong>Paramètres → Marketplace</strong> dans votre Home Assistant, cherchez le nom de l'intégration et téléchargez-la. Pour les autres, cliquez sur <strong>Ajouter au Marketplace</strong> sur la carte ci-dessus — votre Home Assistant s'ouvre et ajoute le dépôt automatiquement (ou ajoutez-le manuellement dans le Marketplace comme dépôt personnalisé, type <em>Intégration</em>).",
@@ -817,12 +839,14 @@ it: {
   src12: "Dati: Commissione federale dell'energia elettrica (ElCom)",
   d13: "Il prezzo di mercato di riferimento svizzero ufficiale per il solare (art. 15 OPEn) come sensore — sai quanto vale la tua energia solare immessa ogni trimestre, ideale per monitorare i ricavi dell'immissione.",
   src13: "Dati: Ufficio federale dell'energia (UFE)",
-  d14: "Controllo locale completo del controller domotico Innoxel Master 3 — luci, dimmer, interruttori e tapparelle (inclusi i moduli di seconda generazione) tramite l'interfaccia SOAP nativa. Niente cloud, niente gateway.",
-  src14: "Compatibile con: Innoxel Master 3 (noxnetRemote SOAP)",
-  d15: "I 30 ingressi a contatto digitali di un modulo AK MODUL-BUS RD30 come sensori binari — gestiti a eventi tramite un server seriale come il Moxa NPort. Assegna nomi e classi di dispositivo agli ingressi dall'interfaccia; contatti porta, rilevatori d'acqua, uscite della centrale d'allarme o stato pompa arrivano direttamente in Home Assistant. Richiede un server seriale-Ethernet — il solo RD30 dispone unicamente di una porta RS-232.",
-  src15: "Compatibile con: AK MODUL-BUS RD30 tramite server seriale (testato con Moxa NPort 5110)",
-  d16: "Le ultime estrazioni di Swiss Lotto, EuroMillions ed EuroDreams di Swisslos — numeri, numero fortunato, stelle, Joker, Super-Star, jackpot e prossima estrazione — e le tue schedine verificate a ogni estrazione, con una scheda per la dashboard inclusa che mostra le palline estratte ed evidenzia i tuoi numeri vincenti.",
-  src16: "Dati: risultati delle estrazioni pubblicati da Swisslos (swisslos.ch)",
+  d14: "Previsione di produzione FV dalla previsione locale di MeteoSvizzera: radiazione globale e diffusa, ora per ora per nove giorni, proiettata sulle vostre falde. Scegliete le falde dal catasto solare Tettosolare per indirizzo o marcatore, inserite i valori e l'impianto compare nella previsione solare del quadro energia – senza account, senza chiave API.",
+  src14: "Dati: previsione locale MeteoSvizzera (open data, CC BY 4.0) · Tettosolare, Ufficio federale dell'energia UFE",
+  d15: "Controllo locale completo del controller domotico Innoxel Master 3 — luci, dimmer, interruttori e tapparelle (inclusi i moduli di seconda generazione) tramite l'interfaccia SOAP nativa. Niente cloud, niente gateway.",
+  src15: "Compatibile con: Innoxel Master 3 (noxnetRemote SOAP)",
+  d16: "I 30 ingressi a contatto digitali di un modulo AK MODUL-BUS RD30 come sensori binari — gestiti a eventi tramite un server seriale come il Moxa NPort. Assegna nomi e classi di dispositivo agli ingressi dall'interfaccia; contatti porta, rilevatori d'acqua, uscite della centrale d'allarme o stato pompa arrivano direttamente in Home Assistant. Richiede un server seriale-Ethernet — il solo RD30 dispone unicamente di una porta RS-232.",
+  src16: "Compatibile con: AK MODUL-BUS RD30 tramite server seriale (testato con Moxa NPort 5110)",
+  d17: "Le ultime estrazioni di Swiss Lotto, EuroMillions ed EuroDreams di Swisslos — numeri, numero fortunato, stelle, Joker, Super-Star, jackpot e prossima estrazione — e le tue schedine verificate a ogni estrazione, con una scheda per la dashboard inclusa che mostra le palline estratte ed evidenzia i tuoi numeri vincenti.",
+  src17: "Dati: risultati delle estrazioni pubblicati da Swisslos (swisslos.ch)",
   inst_t: "Installazione",
   inst_intro: "Tutte le integrazioni si installano tramite il <a href='https://hacs.xyz/docs/marketplace/' target='_blank' rel='noopener'>Home Assistant Marketplace</a> (integrato in Home Assistant dal 2026.11, in precedenza HACS). Undici di esse sono nel catalogo Marketplace predefinito, le altre si aggiungono come repository personalizzato:",
   inst_1: "Integrazioni con il badge <strong>Nel catalogo Marketplace predefinito</strong>: apri <strong>Impostazioni → Marketplace</strong> nel tuo Home Assistant, cerca il nome dell'integrazione e scaricala. Per le altre fai clic su <strong>Aggiungi al Marketplace</strong> sulla scheda qui sopra — il tuo Home Assistant si apre e aggiunge il repository automaticamente (oppure aggiungilo manualmente nel Marketplace come repository personalizzato, tipo <em>Integrazione</em>).",
