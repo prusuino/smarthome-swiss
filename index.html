@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Smart Home Swiss — Home Assistant Integrations for Switzerland &amp; Austria</title>
 <meta name="description" content="Free open-source smart home integrations for Switzerland and Austria: waters, public alerts, avalanche bulletin, earthquakes, public transport, EV charging, parking, electricity prices and more.">
+<link rel="canonical" href="https://smarthome-swiss.ch/">
+<link rel="icon" href="assets/prusuino.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Smart Home Swiss">
+<meta property="og:title" content="Smart Home Swiss — Home Assistant integrations for Switzerland &amp; Austria">
+<meta property="og:description" content="Free open-source Home Assistant integrations built on official Swiss and Austrian open data.">
+<meta property="og:url" content="https://smarthome-swiss.ch/">
+<meta property="og:image" content="https://smarthome-swiss.ch/assets/prusuino.png">
+<script type="application/ld+json" id="ld-list">{"@context": "https://schema.org", "@type": "ItemList", "name": "Home Assistant integrations for Switzerland and Austria", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Swiss Meteo", "url": "https://smarthome-swiss.ch/swiss-meteo/"}, {"@type": "ListItem", "position": 2, "name": "Swiss Waters", "url": "https://smarthome-swiss.ch/swiss-waters/"}, {"@type": "ListItem", "position": 3, "name": "Swiss Public Alerts", "url": "https://smarthome-swiss.ch/swiss-public-alerts/"}, {"@type": "ListItem", "position": 4, "name": "Swiss Avalanche Bulletin", "url": "https://smarthome-swiss.ch/swiss-avalanche-bulletin/"}, {"@type": "ListItem", "position": 5, "name": "Swiss Earthquakes", "url": "https://smarthome-swiss.ch/swiss-earthquakes/"}, {"@type": "ListItem", "position": 6, "name": "Swiss Hail Protection", "url": "https://smarthome-swiss.ch/swiss-hail-protection/"}, {"@type": "ListItem", "position": 7, "name": "Swiss Transport", "url": "https://smarthome-swiss.ch/swiss-transport/"}, {"@type": "ListItem", "position": 8, "name": "Swiss Charging Stations", "url": "https://smarthome-swiss.ch/swiss-charging-stations/"}, {"@type": "ListItem", "position": 9, "name": "Austrian Charging Stations", "url": "https://smarthome-swiss.ch/austrian-charging-stations/"}, {"@type": "ListItem", "position": 10, "name": "Swiss Parking", "url": "https://smarthome-swiss.ch/swiss-parking/"}, {"@type": "ListItem", "position": 11, "name": "Swiss Shared Mobility", "url": "https://smarthome-swiss.ch/swiss-shared-mobility/"}, {"@type": "ListItem", "position": 12, "name": "Swiss Electricity Price", "url": "https://smarthome-swiss.ch/swiss-electricity-price/"}, {"@type": "ListItem", "position": 13, "name": "Swiss Solar Reference Price", "url": "https://smarthome-swiss.ch/swiss-solar-reference-price/"}, {"@type": "ListItem", "position": 14, "name": "Swiss Solar Forecast", "url": "https://smarthome-swiss.ch/swiss-solar-forecast/"}, {"@type": "ListItem", "position": 15, "name": "Innoxel Master 3", "url": "https://smarthome-swiss.ch/innoxel-master3/"}, {"@type": "ListItem", "position": 16, "name": "RD30 Digital Interface", "url": "https://smarthome-swiss.ch/rd30/"}, {"@type": "ListItem", "position": 17, "name": "Swiss Lottery", "url": "https://smarthome-swiss.ch/swiss-lottery/"}]}</script>
 <style>
 :root {
   --accent: #2563eb;
@@ -154,6 +163,8 @@ p.section-sub { color: var(--text-soft); margin-bottom: 1.4rem; max-width: 46rem
 }
 .card-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card h3 { font-size: 1.06rem; font-weight: 700; line-height: 1.3; }
+.card h3 a { color: inherit; }
+.card h3 a:hover { color: var(--accent); }
 .badges { margin-top: .3rem; display: flex; gap: .4rem; flex-wrap: wrap; }
 .badge {
   font-size: .7rem;
@@ -288,7 +299,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/swiss_meteo.png" alt="Swiss Meteo icon"></div>
         <div>
-          <h3>Swiss Meteo</h3>
+          <h3><a href="swiss-meteo/">Swiss Meteo</a></h3>
           <div class="badges"><span class="badge">v1.7.0</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge silver" title="Home Assistant integration quality scale, self-assessed">Quality scale: Silver</span><span class="badge neutral">MeteoSwiss Open Data</span><span class="badge neutral">Radar</span><span class="badge neutral">Warnings</span><span class="badge neutral">Dashboard cards</span></div>
         </div>
       </div>
@@ -304,7 +315,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/swiss_waters.png" alt="Swiss Waters icon"></div>
         <div>
-          <h3>Swiss Waters</h3>
+          <h3><a href="swiss-waters/">Swiss Waters</a></h3>
           <div class="badges"><span class="badge">v1.8.1</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">FOEN / BAFU</span><span class="badge neutral">Badestellen</span></div>
         </div>
       </div>
@@ -320,7 +331,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/swiss_public_alerts.png" alt="Swiss Public Alerts icon"></div>
         <div>
-          <h3>Swiss Public Alerts</h3>
+          <h3><a href="swiss-public-alerts/">Swiss Public Alerts</a></h3>
           <div class="badges"><span class="badge">v1.7.2</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">Alertswiss</span><span class="badge neutral">naturgefahren.ch</span></div>
         </div>
       </div>
@@ -336,7 +347,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/slf_avalanche.png" alt="Swiss Avalanche Bulletin icon"></div>
         <div>
-          <h3>Swiss Avalanche Bulletin</h3>
+          <h3><a href="swiss-avalanche-bulletin/">Swiss Avalanche Bulletin</a></h3>
           <div class="badges"><span class="badge">v1.6.2</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">SLF</span><span class="badge neutral">IMIS</span></div>
         </div>
       </div>
@@ -352,7 +363,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/sed_earthquakes.png" alt="Swiss Earthquakes icon"></div>
         <div>
-          <h3>Swiss Earthquakes</h3>
+          <h3><a href="swiss-earthquakes/">Swiss Earthquakes</a></h3>
           <div class="badges"><span class="badge">v1.9.2</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">SED</span></div>
         </div>
       </div>
@@ -368,7 +379,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/swiss_hail_protection.png" alt="Swiss Hail Protection icon"></div>
         <div>
-          <h3>Swiss Hail Protection</h3>
+          <h3><a href="swiss-hail-protection/">Swiss Hail Protection</a></h3>
           <div class="badges"><span class="badge">v1.6.0</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">VKF</span><span class="badge neutral">MeteoSwiss</span></div>
         </div>
       </div>
@@ -392,7 +403,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/swiss_transport.png" alt="Swiss Transport icon"></div>
         <div>
-          <h3>Swiss Transport</h3>
+          <h3><a href="swiss-transport/">Swiss Transport</a></h3>
           <div class="badges"><span class="badge">v1.12.0</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">opendata.ch</span></div>
         </div>
       </div>
@@ -408,7 +419,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/ich_tanke_strom.png" alt="Swiss Charging Stations icon"></div>
         <div>
-          <h3>Swiss Charging Stations</h3>
+          <h3><a href="swiss-charging-stations/">Swiss Charging Stations</a></h3>
           <div class="badges"><span class="badge">v1.14.3</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">ich-tanke-strom.ch</span></div>
         </div>
       </div>
@@ -424,7 +435,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/ladestellen_at.png" alt="Austrian Charging Stations icon"></div>
         <div>
-          <h3>Austrian Charging Stations</h3>
+          <h3><a href="austrian-charging-stations/">Austrian Charging Stations</a></h3>
           <div class="badges"><span class="badge">v1.7.3</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">E-Control</span></div>
         </div>
       </div>
@@ -440,7 +451,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/swiss_parking.png" alt="Swiss Parking icon"></div>
         <div>
-          <h3>Swiss Parking</h3>
+          <h3><a href="swiss-parking/">Swiss Parking</a></h3>
           <div class="badges"><span class="badge">v1.6.1</span><span class="badge neutral">City PLS feeds</span></div>
         </div>
       </div>
@@ -456,7 +467,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/swiss_shared_mobility.png" alt="Swiss Shared Mobility icon"></div>
         <div>
-          <h3>Swiss Shared Mobility</h3>
+          <h3><a href="swiss-shared-mobility/">Swiss Shared Mobility</a></h3>
           <div class="badges"><span class="badge">v1.5.0</span><span class="badge neutral">REST API</span></div>
         </div>
       </div>
@@ -480,7 +491,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/elcom_tariffs.png" alt="Swiss Electricity Price icon"></div>
         <div>
-          <h3>Swiss Electricity Price</h3>
+          <h3><a href="swiss-electricity-price/">Swiss Electricity Price</a></h3>
           <div class="badges"><span class="badge">v1.12.1</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">ElCom</span></div>
         </div>
       </div>
@@ -496,7 +507,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/solar_reference_price.png" alt="Swiss Solar Reference Price icon"></div>
         <div>
-          <h3>Swiss Solar Reference Price</h3>
+          <h3><a href="swiss-solar-reference-price/">Swiss Solar Reference Price</a></h3>
           <div class="badges"><span class="badge">v1.6.1</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">SFOE</span></div>
         </div>
       </div>
@@ -512,7 +523,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/swiss_solar_forecast.png" alt="Swiss Solar Forecast icon"></div>
         <div>
-          <h3>Swiss Solar Forecast</h3>
+          <h3><a href="swiss-solar-forecast/">Swiss Solar Forecast</a></h3>
           <div class="badges"><span class="badge">v0.6.0</span><span class="badge neutral">MeteoSwiss</span><span class="badge neutral">Sonnendach</span></div>
         </div>
       </div>
@@ -536,7 +547,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/innoxel.png" alt="Innoxel Master 3 icon"></div>
         <div>
-          <h3>Innoxel Master 3</h3>
+          <h3><a href="innoxel-master3/">Innoxel Master 3</a></h3>
           <div class="badges"><span class="badge">v1.6.3</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">Local SOAP</span></div>
         </div>
       </div>
@@ -552,7 +563,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/rd30.png" alt="RD30 Digital Interface icon"></div>
         <div>
-          <h3>RD30 Digital Interface</h3>
+          <h3><a href="rd30/">RD30 Digital Interface</a></h3>
           <div class="badges"><span class="badge">v1.0.1</span><span class="badge neutral">AK MODUL-BUS</span><span class="badge neutral">Moxa NPort</span></div>
         </div>
       </div>
@@ -576,7 +587,7 @@ footer .disclaimer { max-width: 52rem; margin: 0 auto .9rem; }
       <div class="card-head">
         <div class="card-icon"><img src="assets/swiss_lottery.png" alt="Swiss Lottery icon"></div>
         <div>
-          <h3>Swiss Lottery</h3>
+          <h3><a href="swiss-lottery/">Swiss Lottery</a></h3>
           <div class="badges"><span class="badge">v0.5.3</span><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">Swisslos</span><span class="badge neutral">Dashboard card</span></div>
         </div>
       </div>
