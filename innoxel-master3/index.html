@@ -279,34 +279,45 @@ header h1 { margin: 0; }
 .page .actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1.2rem; }
 .page .source { margin-top: .8rem; }
 .page .more a { display: inline-block; margin: .2rem .5rem .2rem 0; }
+[data-l]:not([data-l="en"]) { display: none; }
+html[lang="de"] [data-l]:not([data-l="de"]), html[lang="fr"] [data-l]:not([data-l="fr"]), html[lang="it"] [data-l]:not([data-l="it"]) { display: none; }
+html[lang="de"] [data-l="de"], html[lang="fr"] [data-l="fr"], html[lang="it"] [data-l="it"] { display: revert; }
+.page .note { color: var(--text-soft); font-size: .88rem; }
 .page code { background: var(--accent-soft); padding: .05rem .3rem; border-radius: 5px; font-size: .92em; }
 </style>
 </head>
 <body>
 
 <header>
-  <a class="crumb" href="../">← Smart Home Swiss · all integrations</a>
+  <nav class="lang-switch" aria-label="Language">
+    <button data-lang="de">DE</button>
+    <button data-lang="en">EN</button>
+    <button data-lang="fr">FR</button>
+    <button data-lang="it">IT</button>
+  </nav>
+  <a data-l="en" lang="en" class="crumb" href="../">← Smart Home Swiss · all integrations</a><a data-l="de" lang="de" class="crumb" href="../">← Smart Home Swiss · alle Integrationen</a><a data-l="fr" lang="fr" class="crumb" href="../">← Smart Home Swiss · toutes les intégrations</a><a data-l="it" lang="it" class="crumb" href="../">← Smart Home Swiss · tutte le integrazioni</a>
   <div class="page-head">
     <img src="../assets/innoxel.png" alt="Innoxel Master 3 icon">
-    <h1>Innoxel Master 3 for Home Assistant</h1>
+    <h1>Innoxel Master 3 <span data-l="en" lang="en">for Home Assistant</span><span data-l="de" lang="de">für Home Assistant</span><span data-l="fr" lang="fr">pour Home Assistant</span><span data-l="it" lang="it">per Home Assistant</span></h1>
   </div>
-  <p class="tagline">Local control of the Innoxel Master 3</p>
+  <p data-l="en" lang="en" class="tagline">Local control of the Innoxel Master 3</p><p data-l="de" lang="de" class="tagline">Lokale Steuerung des Innoxel Master 3</p><p data-l="fr" lang="fr" class="tagline">Commande locale de l&#x27;Innoxel Master 3</p><p data-l="it" lang="it" class="tagline">Controllo locale dell&#x27;Innoxel Master 3</p>
 </header>
 
 <main class="page">
 
-<p class="lead">Full local control of the Innoxel Master 3 home automation controller — lights, dimmers, switches and covers (including second-generation blind modules) over the native SOAP interface. No cloud, no gateway.</p>
-<div class="badges"><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">Local SOAP</span></div>
-<div class="source">Works with: Innoxel Master 3 (noxnetRemote SOAP)</div>
+<p data-l="en" lang="en" class="lead">Full local control of the Innoxel Master 3 home automation controller — lights, dimmers, switches and covers (including second-generation blind modules) over the native SOAP interface. No cloud, no gateway.</p><p data-l="de" lang="de" class="lead">Volle lokale Steuerung des Innoxel Master 3 — Lichter, Dimmer, Schalter und Storen (inklusive Storenmodule der zweiten Generation) über die native SOAP-Schnittstelle. Keine Cloud, kein Gateway.</p><p data-l="fr" lang="fr" class="lead">Contrôle local complet du contrôleur domotique Innoxel Master 3 — éclairages, variateurs, interrupteurs et stores (y compris les modules de stores de deuxième génération) via l&#x27;interface SOAP native. Sans cloud, sans passerelle.</p><p data-l="it" lang="it" class="lead">Controllo locale completo del controller domotico Innoxel Master 3 — luci, dimmer, interruttori e tapparelle (inclusi i moduli di seconda generazione) tramite l&#x27;interfaccia SOAP nativa. Niente cloud, niente gateway.</p>
+<div class="badges"><span data-l="en" lang="en" class="badge hacs">In Marketplace default catalog</span><span data-l="de" lang="de" class="badge hacs">Im Marketplace-Standardkatalog</span><span data-l="fr" lang="fr" class="badge hacs">Dans le catalogue Marketplace par défaut</span><span data-l="it" lang="it" class="badge hacs">Nel catalogo Marketplace predefinito</span><span class="badge neutral">Local SOAP</span></div>
+<div data-l="en" lang="en" class="source">Works with: Innoxel Master 3 (noxnetRemote SOAP)</div><div data-l="de" lang="de" class="source">Kompatibel mit: Innoxel Master 3 (noxnetRemote SOAP)</div><div data-l="fr" lang="fr" class="source">Compatible avec : Innoxel Master 3 (noxnetRemote SOAP)</div><div data-l="it" lang="it" class="source">Compatibile con: Innoxel Master 3 (noxnetRemote SOAP)</div>
 <div class="actions">
-  <a class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_innoxel_master3&amp;category=integration" target="_blank" rel="noopener">Add to Marketplace</a>
-  <a class="btn" href="https://github.com/prusuino/ha_innoxel_master3#readme" target="_blank" rel="noopener">Documentation on GitHub</a>
-  <a class="btn" href="https://github.com/prusuino/ha_innoxel_master3/releases" target="_blank" rel="noopener">Releases</a>
-  <a class="btn" href="https://github.com/prusuino/ha_innoxel_master3/issues" target="_blank" rel="noopener">Report a problem</a>
+  <a data-l="en" lang="en" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_innoxel_master3&amp;category=integration" target="_blank" rel="noopener">Add to Marketplace</a><a data-l="de" lang="de" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_innoxel_master3&amp;category=integration" target="_blank" rel="noopener">Zum Marketplace hinzufügen</a><a data-l="fr" lang="fr" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_innoxel_master3&amp;category=integration" target="_blank" rel="noopener">Ajouter au Marketplace</a><a data-l="it" lang="it" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_innoxel_master3&amp;category=integration" target="_blank" rel="noopener">Aggiungi al Marketplace</a>
+  <a data-l="en" lang="en" class="btn" href="https://github.com/prusuino/ha_innoxel_master3#readme" target="_blank" rel="noopener">Documentation on GitHub</a><a data-l="de" lang="de" class="btn" href="https://github.com/prusuino/ha_innoxel_master3#readme" target="_blank" rel="noopener">Dokumentation auf GitHub</a><a data-l="fr" lang="fr" class="btn" href="https://github.com/prusuino/ha_innoxel_master3#readme" target="_blank" rel="noopener">Documentation sur GitHub</a><a data-l="it" lang="it" class="btn" href="https://github.com/prusuino/ha_innoxel_master3#readme" target="_blank" rel="noopener">Documentazione su GitHub</a>
+  <a data-l="en" lang="en" class="btn" href="https://github.com/prusuino/ha_innoxel_master3/releases" target="_blank" rel="noopener">Releases</a><a data-l="de" lang="de" class="btn" href="https://github.com/prusuino/ha_innoxel_master3/releases" target="_blank" rel="noopener">Versionen</a><a data-l="fr" lang="fr" class="btn" href="https://github.com/prusuino/ha_innoxel_master3/releases" target="_blank" rel="noopener">Versions</a><a data-l="it" lang="it" class="btn" href="https://github.com/prusuino/ha_innoxel_master3/releases" target="_blank" rel="noopener">Versioni</a>
+  <a data-l="en" lang="en" class="btn" href="https://github.com/prusuino/ha_innoxel_master3/issues" target="_blank" rel="noopener">Report a problem</a><a data-l="de" lang="de" class="btn" href="https://github.com/prusuino/ha_innoxel_master3/issues" target="_blank" rel="noopener">Problem melden</a><a data-l="fr" lang="fr" class="btn" href="https://github.com/prusuino/ha_innoxel_master3/issues" target="_blank" rel="noopener">Signaler un problème</a><a data-l="it" lang="it" class="btn" href="https://github.com/prusuino/ha_innoxel_master3/issues" target="_blank" rel="noopener">Segnalare un problema</a>
 </div>
 
-<h2>Highlights</h2>
-<ul>
+<h2 data-l="en" lang="en">Highlights</h2><h2 data-l="de" lang="de">Das kann die Integration</h2><h2 data-l="fr" lang="fr">Points forts</h2><h2 data-l="it" lang="it">Punti di forza</h2>
+<p data-l="de" lang="de" class="note">Diese Liste gibt es nur auf Englisch.</p><p data-l="fr" lang="fr" class="note">Cette liste n&#x27;existe qu&#x27;en anglais.</p><p data-l="it" lang="it" class="note">Questo elenco è disponibile solo in inglese.</p>
+<ul lang="en">
 <li><strong>Local and direct</strong>: talks SOAP to the master on your own network — no cloud, no MQTT bridge, no extra gateway.</li>
 <li><strong>Nothing to map by hand</strong>: channels, names and rooms are read from the master&#x27;s own configuration, and a new upload from the INNOXEL Setup software is picked up automatically.</li>
 <li><strong>Blinds that travel all the way</strong>: a cover triggers the matching virtual input channel, so one command is a full run to the end position instead of a short jog; Motor G2 blinds with position and tilt are supported experimentally.</li>
@@ -317,32 +328,34 @@ header h1 { margin: 0; }
 <li><strong>Set up in a minute</strong>: the master is found on the network (SSDP), you only add the credentials; a re-authentication prompt when they change; German, English, French and Italian.</li>
 </ul>
 
-<h2>How to install</h2>
-<p>Open <strong>Settings → Marketplace</strong> in Home Assistant, search for <strong>Innoxel Master 3</strong> and download it. Restart Home Assistant, then add the integration under <strong>Settings → Devices &amp; services</strong>. Free and open source, no account needed. The full documentation is in the <a href="https://github.com/prusuino/ha_innoxel_master3#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
+<h2 data-l="en" lang="en">How to install</h2><h2 data-l="de" lang="de">Installation</h2><h2 data-l="fr" lang="fr">Installation</h2><h2 data-l="it" lang="it">Installazione</h2>
+<p data-l="en" lang="en">Open <strong>Settings → Marketplace</strong> in Home Assistant, search for <strong>Innoxel Master 3</strong> and download it. Restart Home Assistant, then add the integration under <strong>Settings → Devices &amp; services</strong>. Free and open source, no account needed. The full documentation is in the README on GitHub.</p><p data-l="de" lang="de">Öffne in Home Assistant <strong>Einstellungen → Marketplace</strong>, suche nach <strong>Innoxel Master 3</strong> und lade die Integration herunter. Starte Home Assistant neu und füge sie unter <strong>Einstellungen → Geräte &amp; Dienste</strong> hinzu. Kostenlos und quelloffen, kein Konto nötig. Die ganze Dokumentation steht im README auf GitHub (englisch).</p><p data-l="fr" lang="fr">Ouvrez <strong>Paramètres → Marketplace</strong> dans Home Assistant, cherchez <strong>Innoxel Master 3</strong> et téléchargez l'intégration. Redémarrez Home Assistant, puis ajoutez-la sous <strong>Paramètres → Appareils et services</strong>. Gratuit et open source, sans compte. La documentation complète se trouve dans le README sur GitHub (en anglais).</p><p data-l="it" lang="it">Apri <strong>Impostazioni → Marketplace</strong> in Home Assistant, cerca <strong>Innoxel Master 3</strong> e scarica l'integrazione. Riavvia Home Assistant, poi aggiungila in <strong>Impostazioni → Dispositivi e servizi</strong>. Gratuito e open source, nessun account necessario. La documentazione completa è nel README su GitHub (in inglese).</p>
 
-<section lang="de">
-<h2>Deutsch: Lokale Steuerung des Innoxel Master 3</h2>
-<p>Volle lokale Steuerung des Innoxel Master 3 — Lichter, Dimmer, Schalter und Storen (inklusive Storenmodule der zweiten Generation) über die native SOAP-Schnittstelle. Keine Cloud, kein Gateway.</p>
-<div class="source">Kompatibel mit: Innoxel Master 3 (noxnetRemote SOAP)</div>
-</section>
-<section lang="fr">
-<h2>Français: Commande locale de l&#x27;Innoxel Master 3</h2>
-<p>Contrôle local complet du contrôleur domotique Innoxel Master 3 — éclairages, variateurs, interrupteurs et stores (y compris les modules de stores de deuxième génération) via l&#x27;interface SOAP native. Sans cloud, sans passerelle.</p>
-<div class="source">Compatible avec : Innoxel Master 3 (noxnetRemote SOAP)</div>
-</section>
-<section lang="it">
-<h2>Italiano: Controllo locale dell&#x27;Innoxel Master 3</h2>
-<p>Controllo locale completo del controller domotico Innoxel Master 3 — luci, dimmer, interruttori e tapparelle (inclusi i moduli di seconda generazione) tramite l&#x27;interfaccia SOAP nativa. Niente cloud, niente gateway.</p>
-<div class="source">Compatibile con: Innoxel Master 3 (noxnetRemote SOAP)</div>
-</section>
-
-<h2>More integrations</h2>
+<h2 data-l="en" lang="en">More integrations</h2><h2 data-l="de" lang="de">Weitere Integrationen</h2><h2 data-l="fr" lang="fr">Autres intégrations</h2><h2 data-l="it" lang="it">Altre integrazioni</h2>
 <p class="more"><a href="../swiss-meteo/">Swiss Meteo</a><a href="../swiss-waters/">Swiss Waters</a><a href="../swiss-public-alerts/">Swiss Public Alerts</a><a href="../swiss-avalanche-bulletin/">Swiss Avalanche Bulletin</a><a href="../swiss-earthquakes/">Swiss Earthquakes</a><a href="../swiss-hail-protection/">Swiss Hail Protection</a><a href="../swiss-transport/">Swiss Transport</a><a href="../swiss-charging-stations/">Swiss Charging Stations</a><a href="../austrian-charging-stations/">Austrian Charging Stations</a><a href="../swiss-parking/">Swiss Parking</a><a href="../swiss-shared-mobility/">Swiss Shared Mobility</a><a href="../swiss-electricity-price/">Swiss Electricity Price</a><a href="../swiss-solar-reference-price/">Swiss Solar Reference Price</a><a href="../swiss-solar-forecast/">Swiss Solar Forecast</a><a href="../rd30/">RD30 Digital Interface</a><a href="../swiss-lottery/">Swiss Lottery</a></p>
 </main>
 
 <footer>
-  <p class="disclaimer">These are independent open-source projects. They are not affiliated with, endorsed by or supported by any of the data providers mentioned (FOEN, FOCP/Alertswiss, SLF, SED, ElCom, SFOE, E-Control, transport.opendata.ch or others). Home Assistant is a trademark of the Open Home Foundation; these projects are independent community integrations and are not affiliated with the Open Home Foundation. All software is provided "as is", without warranty of any kind. Do not rely on it for safety-critical decisions — always follow official channels for alerts and warnings.</p>
+  <p data-l="en" lang="en" class="disclaimer">These are independent open-source projects. They are not affiliated with, endorsed by or supported by any of the data providers mentioned (FOEN, FOCP/Alertswiss, SLF, SED, ElCom, SFOE, E-Control, transport.opendata.ch or others). Home Assistant is a trademark of the Open Home Foundation; these projects are independent community integrations and are not affiliated with the Open Home Foundation. All software is provided &quot;as is&quot;, without warranty of any kind. Do not rely on it for safety-critical decisions — always follow official channels for alerts and warnings.</p><p data-l="de" lang="de" class="disclaimer">Dies sind unabhängige Open-Source-Projekte. Sie stehen in keiner Verbindung zu den genannten Datenanbietern (BAFU, BABS/Alertswiss, SLF, SED, ElCom, BFE, E-Control, transport.opendata.ch u.a.) und sind keine offiziellen Angebote dieser Stellen. Home Assistant ist eine Marke der Open Home Foundation; diese Projekte sind unabhängige Community-Integrationen und mit der Open Home Foundation nicht verbunden. Die Software wird ohne jegliche Gewährleistung bereitgestellt. Verlasse dich für sicherheitsrelevante Entscheidungen nicht darauf — befolge stets die offiziellen Kanäle für Warnungen.</p><p data-l="fr" lang="fr" class="disclaimer">Ces projets open source sont indépendants. Ils ne sont ni affiliés ni soutenus par les fournisseurs de données mentionnés (OFEV, OFPP/Alertswiss, SLF, SED, ElCom, OFEN, E-Control, transport.opendata.ch ou autres). Home Assistant est une marque de l&#x27;Open Home Foundation ; ces projets sont des intégrations communautaires indépendantes, sans lien avec l&#x27;Open Home Foundation. Le logiciel est fourni « tel quel », sans aucune garantie. Ne vous y fiez pas pour des décisions critiques de sécurité — suivez toujours les canaux officiels pour les alertes.</p><p data-l="it" lang="it" class="disclaimer">Questi sono progetti open source indipendenti. Non sono affiliati, approvati o supportati dai fornitori di dati citati (UFAM, UFPP/Alertswiss, SLF, SED, ElCom, UFE, E-Control, transport.opendata.ch o altri). Home Assistant è un marchio della Open Home Foundation; questi progetti sono integrazioni indipendenti della community e non sono affiliati alla Open Home Foundation. Il software è fornito «così com&#x27;è», senza alcuna garanzia. Non fare affidamento su di esso per decisioni critiche per la sicurezza — segui sempre i canali ufficiali per le allerte.</p>
   <p>© 2026 smarthome-swiss.ch · <a href="https://github.com/prusuino" target="_blank" rel="noopener">prusuino on GitHub</a></p>
 </footer>
+<script>
+const TITLES = {"en": "Innoxel Master 3 – Local control of the Innoxel Master 3 for Home Assistant", "de": "Innoxel Master 3 – Lokale Steuerung des Innoxel Master 3 für Home Assistant", "fr": "Innoxel Master 3 – Commande locale de l'Innoxel Master 3 pour Home Assistant", "it": "Innoxel Master 3 – Controllo locale dell'Innoxel Master 3 per Home Assistant"};
+function setLang(lang) {
+  if (!TITLES[lang]) lang = "en";
+  document.documentElement.lang = lang;
+  document.title = TITLES[lang];
+  document.querySelectorAll(".lang-switch button").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+}
+document.querySelectorAll(".lang-switch button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+let initial = null;
+try { initial = localStorage.getItem("lang"); } catch (e) {}
+if (!initial) {
+  const nav = (navigator.language || "en").slice(0, 2).toLowerCase();
+  initial = ["de", "fr", "it"].includes(nav) ? nav : "en";
+}
+setLang(initial);
+</script>
 </body>
 </html>

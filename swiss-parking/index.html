@@ -279,34 +279,45 @@ header h1 { margin: 0; }
 .page .actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1.2rem; }
 .page .source { margin-top: .8rem; }
 .page .more a { display: inline-block; margin: .2rem .5rem .2rem 0; }
+[data-l]:not([data-l="en"]) { display: none; }
+html[lang="de"] [data-l]:not([data-l="de"]), html[lang="fr"] [data-l]:not([data-l="fr"]), html[lang="it"] [data-l]:not([data-l="it"]) { display: none; }
+html[lang="de"] [data-l="de"], html[lang="fr"] [data-l="fr"], html[lang="it"] [data-l="it"] { display: revert; }
+.page .note { color: var(--text-soft); font-size: .88rem; }
 .page code { background: var(--accent-soft); padding: .05rem .3rem; border-radius: 5px; font-size: .92em; }
 </style>
 </head>
 <body>
 
 <header>
-  <a class="crumb" href="../">← Smart Home Swiss · all integrations</a>
+  <nav class="lang-switch" aria-label="Language">
+    <button data-lang="de">DE</button>
+    <button data-lang="en">EN</button>
+    <button data-lang="fr">FR</button>
+    <button data-lang="it">IT</button>
+  </nav>
+  <a data-l="en" lang="en" class="crumb" href="../">← Smart Home Swiss · all integrations</a><a data-l="de" lang="de" class="crumb" href="../">← Smart Home Swiss · alle Integrationen</a><a data-l="fr" lang="fr" class="crumb" href="../">← Smart Home Swiss · toutes les intégrations</a><a data-l="it" lang="it" class="crumb" href="../">← Smart Home Swiss · tutte le integrazioni</a>
   <div class="page-head">
     <img src="../assets/swiss_parking.png" alt="Swiss Parking icon">
-    <h1>Swiss Parking for Home Assistant</h1>
+    <h1>Swiss Parking <span data-l="en" lang="en">for Home Assistant</span><span data-l="de" lang="de">für Home Assistant</span><span data-l="fr" lang="fr">pour Home Assistant</span><span data-l="it" lang="it">per Home Assistant</span></h1>
   </div>
-  <p class="tagline">Free parking spaces in Swiss cities</p>
+  <p data-l="en" lang="en" class="tagline">Free parking spaces in Swiss cities</p><p data-l="de" lang="de" class="tagline">Freie Parkplätze in Schweizer Parkhäusern</p><p data-l="fr" lang="fr" class="tagline">Places de parc libres dans les villes suisses</p><p data-l="it" lang="it" class="tagline">Posteggi liberi nelle città svizzere</p>
 </header>
 
 <main class="page">
 <img class="shot" src="../assets/headers/swiss-parking.png" alt="Swiss Parking for Home Assistant: Free parking spaces in Swiss cities">
-<p class="lead">Live free parking spaces in Swiss cities — Zürich, Basel, Winterthur, Bern and Frauenfeld — straight from each city&#x27;s parking guidance system, with sensors and map markers.</p>
+<p data-l="en" lang="en" class="lead">Live free parking spaces in Swiss cities — Zürich, Basel, Winterthur, Bern and Frauenfeld — straight from each city&#x27;s parking guidance system, with sensors and map markers.</p><p data-l="de" lang="de" class="lead">Live freie Parkplätze in Schweizer Städten — Zürich, Basel, Winterthur, Bern und Frauenfeld — direkt aus den städtischen Parkleitsystemen, mit Sensoren und Karten-Markern.</p><p data-l="fr" lang="fr" class="lead">Places de parc libres en direct dans les villes suisses — Zurich, Bâle, Winterthour, Berne et Frauenfeld — directement depuis les systèmes de guidage au parking des villes, avec capteurs et marqueurs sur la carte.</p><p data-l="it" lang="it" class="lead">Parcheggi liberi in tempo reale nelle città svizzere — Zurigo, Basilea, Winterthur, Berna e Frauenfeld — direttamente dai sistemi di guida ai parcheggi delle città, con sensori e marcatori sulla mappa.</p>
 <div class="badges"><span class="badge neutral">City PLS feeds</span></div>
-<div class="source">Data: official city parking guidance systems (open data)</div>
+<div data-l="en" lang="en" class="source">Data: official city parking guidance systems (open data)</div><div data-l="de" lang="de" class="source">Daten: offizielle städtische Parkleitsysteme (Open Data)</div><div data-l="fr" lang="fr" class="source">Données : systèmes officiels de guidage au parking des villes (open data)</div><div data-l="it" lang="it" class="source">Dati: sistemi ufficiali cittadini di guida ai parcheggi (open data)</div>
 <div class="actions">
-  <a class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_swiss_parking&amp;category=integration" target="_blank" rel="noopener">Add to Marketplace</a>
-  <a class="btn" href="https://github.com/prusuino/ha_swiss_parking#readme" target="_blank" rel="noopener">Documentation on GitHub</a>
-  <a class="btn" href="https://github.com/prusuino/ha_swiss_parking/releases" target="_blank" rel="noopener">Releases</a>
-  <a class="btn" href="https://github.com/prusuino/ha_swiss_parking/issues" target="_blank" rel="noopener">Report a problem</a>
+  <a data-l="en" lang="en" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_swiss_parking&amp;category=integration" target="_blank" rel="noopener">Add to Marketplace</a><a data-l="de" lang="de" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_swiss_parking&amp;category=integration" target="_blank" rel="noopener">Zum Marketplace hinzufügen</a><a data-l="fr" lang="fr" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_swiss_parking&amp;category=integration" target="_blank" rel="noopener">Ajouter au Marketplace</a><a data-l="it" lang="it" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_swiss_parking&amp;category=integration" target="_blank" rel="noopener">Aggiungi al Marketplace</a>
+  <a data-l="en" lang="en" class="btn" href="https://github.com/prusuino/ha_swiss_parking#readme" target="_blank" rel="noopener">Documentation on GitHub</a><a data-l="de" lang="de" class="btn" href="https://github.com/prusuino/ha_swiss_parking#readme" target="_blank" rel="noopener">Dokumentation auf GitHub</a><a data-l="fr" lang="fr" class="btn" href="https://github.com/prusuino/ha_swiss_parking#readme" target="_blank" rel="noopener">Documentation sur GitHub</a><a data-l="it" lang="it" class="btn" href="https://github.com/prusuino/ha_swiss_parking#readme" target="_blank" rel="noopener">Documentazione su GitHub</a>
+  <a data-l="en" lang="en" class="btn" href="https://github.com/prusuino/ha_swiss_parking/releases" target="_blank" rel="noopener">Releases</a><a data-l="de" lang="de" class="btn" href="https://github.com/prusuino/ha_swiss_parking/releases" target="_blank" rel="noopener">Versionen</a><a data-l="fr" lang="fr" class="btn" href="https://github.com/prusuino/ha_swiss_parking/releases" target="_blank" rel="noopener">Versions</a><a data-l="it" lang="it" class="btn" href="https://github.com/prusuino/ha_swiss_parking/releases" target="_blank" rel="noopener">Versioni</a>
+  <a data-l="en" lang="en" class="btn" href="https://github.com/prusuino/ha_swiss_parking/issues" target="_blank" rel="noopener">Report a problem</a><a data-l="de" lang="de" class="btn" href="https://github.com/prusuino/ha_swiss_parking/issues" target="_blank" rel="noopener">Problem melden</a><a data-l="fr" lang="fr" class="btn" href="https://github.com/prusuino/ha_swiss_parking/issues" target="_blank" rel="noopener">Signaler un problème</a><a data-l="it" lang="it" class="btn" href="https://github.com/prusuino/ha_swiss_parking/issues" target="_blank" rel="noopener">Segnalare un problema</a>
 </div>
 
-<h2>Highlights</h2>
-<ul>
+<h2 data-l="en" lang="en">Highlights</h2><h2 data-l="de" lang="de">Das kann die Integration</h2><h2 data-l="fr" lang="fr">Points forts</h2><h2 data-l="it" lang="it">Punti di forza</h2>
+<p data-l="de" lang="de" class="note">Diese Liste gibt es nur auf Englisch.</p><p data-l="fr" lang="fr" class="note">Cette liste n&#x27;existe qu&#x27;en anglais.</p><p data-l="it" lang="it" class="note">Questo elenco è disponibile solo in inglese.</p>
+<ul lang="en">
 <li><strong>Free spaces, live</strong>: one sensor per car park with status, capacity and occupancy, refreshed every 2 minutes from the city&#x27;s official parking-guidance system.</li>
 <li><strong>Five cities so far</strong>: Zürich, Basel, Winterthur, Bern and Frauenfeld — one entry per city.</li>
 <li><strong>On the map</strong>: a marker per car park, labelled with the number of free spaces, with a fixed entity id that is the same in every language.</li>
@@ -315,32 +326,34 @@ header h1 { margin: 0; }
 <li><strong>Set up in a minute</strong>: pick a city, the feed is probed before the entry is created; German, English, French and Italian; diagnostics download.</li>
 </ul>
 
-<h2>How to install</h2>
-<p>Click <strong>Add to Marketplace</strong> to add the repository to the Home Assistant Marketplace (formerly HACS), download it and restart Home Assistant. Then add the integration under <strong>Settings → Devices &amp; services</strong>. Free and open source, no account needed. The full documentation is in the <a href="https://github.com/prusuino/ha_swiss_parking#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
+<h2 data-l="en" lang="en">How to install</h2><h2 data-l="de" lang="de">Installation</h2><h2 data-l="fr" lang="fr">Installation</h2><h2 data-l="it" lang="it">Installazione</h2>
+<p data-l="en" lang="en">Click <strong>Add to Marketplace</strong> to add the repository to the Home Assistant Marketplace (formerly HACS), download it and restart Home Assistant. Then add the integration under <strong>Settings → Devices &amp; services</strong>. Free and open source, no account needed. The full documentation is in the README on GitHub.</p><p data-l="de" lang="de">Klicke auf <strong>Zum Marketplace hinzufügen</strong>, um das Repository zum Home Assistant Marketplace (früher HACS) hinzuzufügen, lade es herunter und starte Home Assistant neu. Füge die Integration danach unter <strong>Einstellungen → Geräte &amp; Dienste</strong> hinzu. Kostenlos und quelloffen, kein Konto nötig. Die ganze Dokumentation steht im README auf GitHub (englisch).</p><p data-l="fr" lang="fr">Cliquez sur <strong>Ajouter au Marketplace</strong> pour ajouter le dépôt au Marketplace de Home Assistant (anciennement HACS), téléchargez-le et redémarrez Home Assistant. Ajoutez ensuite l'intégration sous <strong>Paramètres → Appareils et services</strong>. Gratuit et open source, sans compte. La documentation complète se trouve dans le README sur GitHub (en anglais).</p><p data-l="it" lang="it">Fai clic su <strong>Aggiungi al Marketplace</strong> per aggiungere il repository al Marketplace di Home Assistant (ex HACS), scaricalo e riavvia Home Assistant. Aggiungi poi l'integrazione in <strong>Impostazioni → Dispositivi e servizi</strong>. Gratuito e open source, nessun account necessario. La documentazione completa è nel README su GitHub (in inglese).</p>
 
-<section lang="de">
-<h2>Deutsch: Freie Parkplätze in Schweizer Parkhäusern</h2>
-<p>Live freie Parkplätze in Schweizer Städten — Zürich, Basel, Winterthur, Bern und Frauenfeld — direkt aus den städtischen Parkleitsystemen, mit Sensoren und Karten-Markern.</p>
-<div class="source">Daten: offizielle städtische Parkleitsysteme (Open Data)</div>
-</section>
-<section lang="fr">
-<h2>Français: Places de parc libres dans les villes suisses</h2>
-<p>Places de parc libres en direct dans les villes suisses — Zurich, Bâle, Winterthour, Berne et Frauenfeld — directement depuis les systèmes de guidage au parking des villes, avec capteurs et marqueurs sur la carte.</p>
-<div class="source">Données : systèmes officiels de guidage au parking des villes (open data)</div>
-</section>
-<section lang="it">
-<h2>Italiano: Posteggi liberi nelle città svizzere</h2>
-<p>Parcheggi liberi in tempo reale nelle città svizzere — Zurigo, Basilea, Winterthur, Berna e Frauenfeld — direttamente dai sistemi di guida ai parcheggi delle città, con sensori e marcatori sulla mappa.</p>
-<div class="source">Dati: sistemi ufficiali cittadini di guida ai parcheggi (open data)</div>
-</section>
-
-<h2>More integrations</h2>
+<h2 data-l="en" lang="en">More integrations</h2><h2 data-l="de" lang="de">Weitere Integrationen</h2><h2 data-l="fr" lang="fr">Autres intégrations</h2><h2 data-l="it" lang="it">Altre integrazioni</h2>
 <p class="more"><a href="../swiss-meteo/">Swiss Meteo</a><a href="../swiss-waters/">Swiss Waters</a><a href="../swiss-public-alerts/">Swiss Public Alerts</a><a href="../swiss-avalanche-bulletin/">Swiss Avalanche Bulletin</a><a href="../swiss-earthquakes/">Swiss Earthquakes</a><a href="../swiss-hail-protection/">Swiss Hail Protection</a><a href="../swiss-transport/">Swiss Transport</a><a href="../swiss-charging-stations/">Swiss Charging Stations</a><a href="../austrian-charging-stations/">Austrian Charging Stations</a><a href="../swiss-shared-mobility/">Swiss Shared Mobility</a><a href="../swiss-electricity-price/">Swiss Electricity Price</a><a href="../swiss-solar-reference-price/">Swiss Solar Reference Price</a><a href="../swiss-solar-forecast/">Swiss Solar Forecast</a><a href="../innoxel-master3/">Innoxel Master 3</a><a href="../rd30/">RD30 Digital Interface</a><a href="../swiss-lottery/">Swiss Lottery</a></p>
 </main>
 
 <footer>
-  <p class="disclaimer">These are independent open-source projects. They are not affiliated with, endorsed by or supported by any of the data providers mentioned (FOEN, FOCP/Alertswiss, SLF, SED, ElCom, SFOE, E-Control, transport.opendata.ch or others). Home Assistant is a trademark of the Open Home Foundation; these projects are independent community integrations and are not affiliated with the Open Home Foundation. All software is provided "as is", without warranty of any kind. Do not rely on it for safety-critical decisions — always follow official channels for alerts and warnings.</p>
+  <p data-l="en" lang="en" class="disclaimer">These are independent open-source projects. They are not affiliated with, endorsed by or supported by any of the data providers mentioned (FOEN, FOCP/Alertswiss, SLF, SED, ElCom, SFOE, E-Control, transport.opendata.ch or others). Home Assistant is a trademark of the Open Home Foundation; these projects are independent community integrations and are not affiliated with the Open Home Foundation. All software is provided &quot;as is&quot;, without warranty of any kind. Do not rely on it for safety-critical decisions — always follow official channels for alerts and warnings.</p><p data-l="de" lang="de" class="disclaimer">Dies sind unabhängige Open-Source-Projekte. Sie stehen in keiner Verbindung zu den genannten Datenanbietern (BAFU, BABS/Alertswiss, SLF, SED, ElCom, BFE, E-Control, transport.opendata.ch u.a.) und sind keine offiziellen Angebote dieser Stellen. Home Assistant ist eine Marke der Open Home Foundation; diese Projekte sind unabhängige Community-Integrationen und mit der Open Home Foundation nicht verbunden. Die Software wird ohne jegliche Gewährleistung bereitgestellt. Verlasse dich für sicherheitsrelevante Entscheidungen nicht darauf — befolge stets die offiziellen Kanäle für Warnungen.</p><p data-l="fr" lang="fr" class="disclaimer">Ces projets open source sont indépendants. Ils ne sont ni affiliés ni soutenus par les fournisseurs de données mentionnés (OFEV, OFPP/Alertswiss, SLF, SED, ElCom, OFEN, E-Control, transport.opendata.ch ou autres). Home Assistant est une marque de l&#x27;Open Home Foundation ; ces projets sont des intégrations communautaires indépendantes, sans lien avec l&#x27;Open Home Foundation. Le logiciel est fourni « tel quel », sans aucune garantie. Ne vous y fiez pas pour des décisions critiques de sécurité — suivez toujours les canaux officiels pour les alertes.</p><p data-l="it" lang="it" class="disclaimer">Questi sono progetti open source indipendenti. Non sono affiliati, approvati o supportati dai fornitori di dati citati (UFAM, UFPP/Alertswiss, SLF, SED, ElCom, UFE, E-Control, transport.opendata.ch o altri). Home Assistant è un marchio della Open Home Foundation; questi progetti sono integrazioni indipendenti della community e non sono affiliati alla Open Home Foundation. Il software è fornito «così com&#x27;è», senza alcuna garanzia. Non fare affidamento su di esso per decisioni critiche per la sicurezza — segui sempre i canali ufficiali per le allerte.</p>
   <p>© 2026 smarthome-swiss.ch · <a href="https://github.com/prusuino" target="_blank" rel="noopener">prusuino on GitHub</a></p>
 </footer>
+<script>
+const TITLES = {"en": "Swiss Parking – Free parking spaces in Swiss cities for Home Assistant", "de": "Swiss Parking – Freie Parkplätze in Schweizer Parkhäusern für Home Assistant", "fr": "Swiss Parking – Places de parc libres dans les villes suisses pour Home Assistant", "it": "Swiss Parking – Posteggi liberi nelle città svizzere per Home Assistant"};
+function setLang(lang) {
+  if (!TITLES[lang]) lang = "en";
+  document.documentElement.lang = lang;
+  document.title = TITLES[lang];
+  document.querySelectorAll(".lang-switch button").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+}
+document.querySelectorAll(".lang-switch button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+let initial = null;
+try { initial = localStorage.getItem("lang"); } catch (e) {}
+if (!initial) {
+  const nav = (navigator.language || "en").slice(0, 2).toLowerCase();
+  initial = ["de", "fr", "it"].includes(nav) ? nav : "en";
+}
+setLang(initial);
+</script>
 </body>
 </html>

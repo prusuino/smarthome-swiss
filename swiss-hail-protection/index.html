@@ -279,34 +279,45 @@ header h1 { margin: 0; }
 .page .actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1.2rem; }
 .page .source { margin-top: .8rem; }
 .page .more a { display: inline-block; margin: .2rem .5rem .2rem 0; }
+[data-l]:not([data-l="en"]) { display: none; }
+html[lang="de"] [data-l]:not([data-l="de"]), html[lang="fr"] [data-l]:not([data-l="fr"]), html[lang="it"] [data-l]:not([data-l="it"]) { display: none; }
+html[lang="de"] [data-l="de"], html[lang="fr"] [data-l="fr"], html[lang="it"] [data-l="it"] { display: revert; }
+.page .note { color: var(--text-soft); font-size: .88rem; }
 .page code { background: var(--accent-soft); padding: .05rem .3rem; border-radius: 5px; font-size: .92em; }
 </style>
 </head>
 <body>
 
 <header>
-  <a class="crumb" href="../">← Smart Home Swiss · all integrations</a>
+  <nav class="lang-switch" aria-label="Language">
+    <button data-lang="de">DE</button>
+    <button data-lang="en">EN</button>
+    <button data-lang="fr">FR</button>
+    <button data-lang="it">IT</button>
+  </nav>
+  <a data-l="en" lang="en" class="crumb" href="../">← Smart Home Swiss · all integrations</a><a data-l="de" lang="de" class="crumb" href="../">← Smart Home Swiss · alle Integrationen</a><a data-l="fr" lang="fr" class="crumb" href="../">← Smart Home Swiss · toutes les intégrations</a><a data-l="it" lang="it" class="crumb" href="../">← Smart Home Swiss · tutte le integrazioni</a>
   <div class="page-head">
     <img src="../assets/swiss_hail_protection.png" alt="Swiss Hail Protection icon">
-    <h1>Swiss Hail Protection for Home Assistant</h1>
+    <h1>Swiss Hail Protection <span data-l="en" lang="en">for Home Assistant</span><span data-l="de" lang="de">für Home Assistant</span><span data-l="fr" lang="fr">pour Home Assistant</span><span data-l="it" lang="it">per Home Assistant</span></h1>
   </div>
-  <p class="tagline">Hail warnings for blinds and awnings in Switzerland</p>
+  <p data-l="en" lang="en" class="tagline">Hail warnings for blinds and awnings in Switzerland</p><p data-l="de" lang="de" class="tagline">Hagelwarnung und Hagelschutz für Storen in der Schweiz</p><p data-l="fr" lang="fr" class="tagline">Alertes de grêle pour stores en Suisse</p><p data-l="it" lang="it" class="tagline">Allerte grandine per tapparelle e tende in Svizzera</p>
 </header>
 
 <main class="page">
 <img class="shot" src="../assets/headers/swiss-hail-protection.png" alt="Swiss Hail Protection for Home Assistant: Hail warnings for blinds and awnings in Switzerland">
-<p class="lead">Swiss hail warnings for your blinds: either the official VKF hail-protection signal («Hagelschutz – einfach automatisch», for buildings registered with the cantonal building insurers, about 20 minutes ahead) or the MeteoSwiss hail radar — probability of hail and expected hail size around your location, open data, no registration. Both deliver the same alarm sensor for your automations.</p>
-<div class="badges"><span class="badge hacs">In Marketplace default catalog</span><span class="badge neutral">VKF</span><span class="badge neutral">MeteoSwiss</span></div>
-<div class="source">Data: VKF / NetITServices hail-warning service · MeteoSwiss hail radar products (Open Data)</div>
+<p data-l="en" lang="en" class="lead">Swiss hail warnings for your blinds: either the official VKF hail-protection signal («Hagelschutz – einfach automatisch», for buildings registered with the cantonal building insurers, about 20 minutes ahead) or the MeteoSwiss hail radar — probability of hail and expected hail size around your location, open data, no registration. Both deliver the same alarm sensor for your automations.</p><p data-l="de" lang="de" class="lead">Schweizer Hagelwarnung für deine Storen: entweder das offizielle VKF-Hagelschutzsignal («Hagelschutz – einfach automatisch», für bei den kantonalen Gebäudeversicherungen registrierte Gebäude, rund 20 Minuten im Voraus) oder das MeteoSchweiz-Hagelradar — Hagelwahrscheinlichkeit und erwartete Korngrösse rund um deinen Standort, Open Data, ohne Registrierung. Beide liefern denselben Alarmsensor für deine Automationen.</p><p data-l="fr" lang="fr" class="lead">Alerte grêle suisse pour vos stores : soit le signal officiel de protection contre la grêle de l&#x27;AEAI/VKF (« Hagelschutz – einfach automatisch », pour les bâtiments enregistrés auprès des établissements cantonaux d&#x27;assurance, environ 20 minutes à l&#x27;avance), soit le radar grêle de MétéoSuisse — probabilité de grêle et taille attendue des grêlons autour de votre lieu, open data, sans inscription. Les deux fournissent le même capteur d&#x27;alarme pour vos automatisations.</p><p data-l="it" lang="it" class="lead">Allarme grandine svizzero per le tue tapparelle: il segnale ufficiale di protezione antigrandine dell&#x27;AICAA/VKF («Hagelschutz – einfach automatisch», per edifici registrati presso gli istituti cantonali di assicurazione, circa 20 minuti prima) oppure il radar grandine di MeteoSvizzera — probabilità di grandine e dimensione attesa dei chicchi attorno alla tua località, open data, senza registrazione. Entrambi forniscono lo stesso sensore di allarme per le tue automazioni.</p>
+<div class="badges"><span data-l="en" lang="en" class="badge hacs">In Marketplace default catalog</span><span data-l="de" lang="de" class="badge hacs">Im Marketplace-Standardkatalog</span><span data-l="fr" lang="fr" class="badge hacs">Dans le catalogue Marketplace par défaut</span><span data-l="it" lang="it" class="badge hacs">Nel catalogo Marketplace predefinito</span><span class="badge neutral">VKF</span><span class="badge neutral">MeteoSwiss</span></div>
+<div data-l="en" lang="en" class="source">Data: VKF / NetITServices hail-warning service · MeteoSwiss hail radar products (Open Data)</div><div data-l="de" lang="de" class="source">Daten: VKF-/NetITServices-Hagelwarndienst · MeteoSchweiz Hagel-Radarprodukte (Open Data)</div><div data-l="fr" lang="fr" class="source">Données : service d&#x27;alerte grêle AEAI/VKF – NetITServices · produits radar grêle de MétéoSuisse (open data)</div><div data-l="it" lang="it" class="source">Dati: servizio di allarme grandine AICAA/VKF – NetITServices · prodotti radar grandine di MeteoSvizzera (open data)</div>
 <div class="actions">
-  <a class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_swiss_hail_protection&amp;category=integration" target="_blank" rel="noopener">Add to Marketplace</a>
-  <a class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection#readme" target="_blank" rel="noopener">Documentation on GitHub</a>
-  <a class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection/releases" target="_blank" rel="noopener">Releases</a>
-  <a class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection/issues" target="_blank" rel="noopener">Report a problem</a>
+  <a data-l="en" lang="en" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_swiss_hail_protection&amp;category=integration" target="_blank" rel="noopener">Add to Marketplace</a><a data-l="de" lang="de" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_swiss_hail_protection&amp;category=integration" target="_blank" rel="noopener">Zum Marketplace hinzufügen</a><a data-l="fr" lang="fr" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_swiss_hail_protection&amp;category=integration" target="_blank" rel="noopener">Ajouter au Marketplace</a><a data-l="it" lang="it" class="btn primary" href="https://my.home-assistant.io/redirect/hacs_repository/?owner=prusuino&amp;repository=ha_swiss_hail_protection&amp;category=integration" target="_blank" rel="noopener">Aggiungi al Marketplace</a>
+  <a data-l="en" lang="en" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection#readme" target="_blank" rel="noopener">Documentation on GitHub</a><a data-l="de" lang="de" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection#readme" target="_blank" rel="noopener">Dokumentation auf GitHub</a><a data-l="fr" lang="fr" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection#readme" target="_blank" rel="noopener">Documentation sur GitHub</a><a data-l="it" lang="it" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection#readme" target="_blank" rel="noopener">Documentazione su GitHub</a>
+  <a data-l="en" lang="en" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection/releases" target="_blank" rel="noopener">Releases</a><a data-l="de" lang="de" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection/releases" target="_blank" rel="noopener">Versionen</a><a data-l="fr" lang="fr" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection/releases" target="_blank" rel="noopener">Versions</a><a data-l="it" lang="it" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection/releases" target="_blank" rel="noopener">Versioni</a>
+  <a data-l="en" lang="en" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection/issues" target="_blank" rel="noopener">Report a problem</a><a data-l="de" lang="de" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection/issues" target="_blank" rel="noopener">Problem melden</a><a data-l="fr" lang="fr" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection/issues" target="_blank" rel="noopener">Signaler un problème</a><a data-l="it" lang="it" class="btn" href="https://github.com/prusuino/ha_swiss_hail_protection/issues" target="_blank" rel="noopener">Segnalare un problema</a>
 </div>
 
-<h2>Highlights</h2>
-<ul>
+<h2 data-l="en" lang="en">Highlights</h2><h2 data-l="de" lang="de">Das kann die Integration</h2><h2 data-l="fr" lang="fr">Points forts</h2><h2 data-l="it" lang="it">Punti di forza</h2>
+<p data-l="de" lang="de" class="note">Diese Liste gibt es nur auf Englisch.</p><p data-l="fr" lang="fr" class="note">Cette liste n&#x27;existe qu&#x27;en anglais.</p><p data-l="it" lang="it" class="note">Questo elenco è disponibile solo in inglese.</p>
+<ul lang="en">
 <li><strong>Two sources, one alarm</strong>: the VKF hail-warning signal for a registered device or the MeteoSwiss hail radar around any location — both drive the same alarm binary sensor.</li>
 <li><strong>VKF signal</strong>: about 20 minutes of lead time, all year, polled every 120 seconds as the service requires; the status sensor tells a test alarm from a real one.</li>
 <li><strong>MeteoSwiss radar</strong>: no registration; probability of hail and expected hail size on a 1 km grid, April to September, with a radius and an alarm threshold you set.</li>
@@ -317,32 +328,34 @@ header h1 { margin: 0; }
 <li><strong>Set up in a minute</strong>: serial and interface id for the VKF signal, or a radius around your Home Assistant location for the radar; German, English, French and Italian; diagnostics download with serial and coordinates redacted.</li>
 </ul>
 
-<h2>How to install</h2>
-<p>Open <strong>Settings → Marketplace</strong> in Home Assistant, search for <strong>Swiss Hail Protection</strong> and download it. Restart Home Assistant, then add the integration under <strong>Settings → Devices &amp; services</strong>. Free and open source, no account needed. The full documentation is in the <a href="https://github.com/prusuino/ha_swiss_hail_protection#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
+<h2 data-l="en" lang="en">How to install</h2><h2 data-l="de" lang="de">Installation</h2><h2 data-l="fr" lang="fr">Installation</h2><h2 data-l="it" lang="it">Installazione</h2>
+<p data-l="en" lang="en">Open <strong>Settings → Marketplace</strong> in Home Assistant, search for <strong>Swiss Hail Protection</strong> and download it. Restart Home Assistant, then add the integration under <strong>Settings → Devices &amp; services</strong>. Free and open source, no account needed. The full documentation is in the README on GitHub.</p><p data-l="de" lang="de">Öffne in Home Assistant <strong>Einstellungen → Marketplace</strong>, suche nach <strong>Swiss Hail Protection</strong> und lade die Integration herunter. Starte Home Assistant neu und füge sie unter <strong>Einstellungen → Geräte &amp; Dienste</strong> hinzu. Kostenlos und quelloffen, kein Konto nötig. Die ganze Dokumentation steht im README auf GitHub (englisch).</p><p data-l="fr" lang="fr">Ouvrez <strong>Paramètres → Marketplace</strong> dans Home Assistant, cherchez <strong>Swiss Hail Protection</strong> et téléchargez l'intégration. Redémarrez Home Assistant, puis ajoutez-la sous <strong>Paramètres → Appareils et services</strong>. Gratuit et open source, sans compte. La documentation complète se trouve dans le README sur GitHub (en anglais).</p><p data-l="it" lang="it">Apri <strong>Impostazioni → Marketplace</strong> in Home Assistant, cerca <strong>Swiss Hail Protection</strong> e scarica l'integrazione. Riavvia Home Assistant, poi aggiungila in <strong>Impostazioni → Dispositivi e servizi</strong>. Gratuito e open source, nessun account necessario. La documentazione completa è nel README su GitHub (in inglese).</p>
 
-<section lang="de">
-<h2>Deutsch: Hagelwarnung und Hagelschutz für Storen in der Schweiz</h2>
-<p>Schweizer Hagelwarnung für deine Storen: entweder das offizielle VKF-Hagelschutzsignal («Hagelschutz – einfach automatisch», für bei den kantonalen Gebäudeversicherungen registrierte Gebäude, rund 20 Minuten im Voraus) oder das MeteoSchweiz-Hagelradar — Hagelwahrscheinlichkeit und erwartete Korngrösse rund um deinen Standort, Open Data, ohne Registrierung. Beide liefern denselben Alarmsensor für deine Automationen.</p>
-<div class="source">Daten: VKF-/NetITServices-Hagelwarndienst · MeteoSchweiz Hagel-Radarprodukte (Open Data)</div>
-</section>
-<section lang="fr">
-<h2>Français: Alertes de grêle pour stores en Suisse</h2>
-<p>Alerte grêle suisse pour vos stores : soit le signal officiel de protection contre la grêle de l&#x27;AEAI/VKF (« Hagelschutz – einfach automatisch », pour les bâtiments enregistrés auprès des établissements cantonaux d&#x27;assurance, environ 20 minutes à l&#x27;avance), soit le radar grêle de MétéoSuisse — probabilité de grêle et taille attendue des grêlons autour de votre lieu, open data, sans inscription. Les deux fournissent le même capteur d&#x27;alarme pour vos automatisations.</p>
-<div class="source">Données : service d&#x27;alerte grêle AEAI/VKF – NetITServices · produits radar grêle de MétéoSuisse (open data)</div>
-</section>
-<section lang="it">
-<h2>Italiano: Allerte grandine per tapparelle e tende in Svizzera</h2>
-<p>Allarme grandine svizzero per le tue tapparelle: il segnale ufficiale di protezione antigrandine dell&#x27;AICAA/VKF («Hagelschutz – einfach automatisch», per edifici registrati presso gli istituti cantonali di assicurazione, circa 20 minuti prima) oppure il radar grandine di MeteoSvizzera — probabilità di grandine e dimensione attesa dei chicchi attorno alla tua località, open data, senza registrazione. Entrambi forniscono lo stesso sensore di allarme per le tue automazioni.</p>
-<div class="source">Dati: servizio di allarme grandine AICAA/VKF – NetITServices · prodotti radar grandine di MeteoSvizzera (open data)</div>
-</section>
-
-<h2>More integrations</h2>
+<h2 data-l="en" lang="en">More integrations</h2><h2 data-l="de" lang="de">Weitere Integrationen</h2><h2 data-l="fr" lang="fr">Autres intégrations</h2><h2 data-l="it" lang="it">Altre integrazioni</h2>
 <p class="more"><a href="../swiss-meteo/">Swiss Meteo</a><a href="../swiss-waters/">Swiss Waters</a><a href="../swiss-public-alerts/">Swiss Public Alerts</a><a href="../swiss-avalanche-bulletin/">Swiss Avalanche Bulletin</a><a href="../swiss-earthquakes/">Swiss Earthquakes</a><a href="../swiss-transport/">Swiss Transport</a><a href="../swiss-charging-stations/">Swiss Charging Stations</a><a href="../austrian-charging-stations/">Austrian Charging Stations</a><a href="../swiss-parking/">Swiss Parking</a><a href="../swiss-shared-mobility/">Swiss Shared Mobility</a><a href="../swiss-electricity-price/">Swiss Electricity Price</a><a href="../swiss-solar-reference-price/">Swiss Solar Reference Price</a><a href="../swiss-solar-forecast/">Swiss Solar Forecast</a><a href="../innoxel-master3/">Innoxel Master 3</a><a href="../rd30/">RD30 Digital Interface</a><a href="../swiss-lottery/">Swiss Lottery</a></p>
 </main>
 
 <footer>
-  <p class="disclaimer">These are independent open-source projects. They are not affiliated with, endorsed by or supported by any of the data providers mentioned (FOEN, FOCP/Alertswiss, SLF, SED, ElCom, SFOE, E-Control, transport.opendata.ch or others). Home Assistant is a trademark of the Open Home Foundation; these projects are independent community integrations and are not affiliated with the Open Home Foundation. All software is provided "as is", without warranty of any kind. Do not rely on it for safety-critical decisions — always follow official channels for alerts and warnings.</p>
+  <p data-l="en" lang="en" class="disclaimer">These are independent open-source projects. They are not affiliated with, endorsed by or supported by any of the data providers mentioned (FOEN, FOCP/Alertswiss, SLF, SED, ElCom, SFOE, E-Control, transport.opendata.ch or others). Home Assistant is a trademark of the Open Home Foundation; these projects are independent community integrations and are not affiliated with the Open Home Foundation. All software is provided &quot;as is&quot;, without warranty of any kind. Do not rely on it for safety-critical decisions — always follow official channels for alerts and warnings.</p><p data-l="de" lang="de" class="disclaimer">Dies sind unabhängige Open-Source-Projekte. Sie stehen in keiner Verbindung zu den genannten Datenanbietern (BAFU, BABS/Alertswiss, SLF, SED, ElCom, BFE, E-Control, transport.opendata.ch u.a.) und sind keine offiziellen Angebote dieser Stellen. Home Assistant ist eine Marke der Open Home Foundation; diese Projekte sind unabhängige Community-Integrationen und mit der Open Home Foundation nicht verbunden. Die Software wird ohne jegliche Gewährleistung bereitgestellt. Verlasse dich für sicherheitsrelevante Entscheidungen nicht darauf — befolge stets die offiziellen Kanäle für Warnungen.</p><p data-l="fr" lang="fr" class="disclaimer">Ces projets open source sont indépendants. Ils ne sont ni affiliés ni soutenus par les fournisseurs de données mentionnés (OFEV, OFPP/Alertswiss, SLF, SED, ElCom, OFEN, E-Control, transport.opendata.ch ou autres). Home Assistant est une marque de l&#x27;Open Home Foundation ; ces projets sont des intégrations communautaires indépendantes, sans lien avec l&#x27;Open Home Foundation. Le logiciel est fourni « tel quel », sans aucune garantie. Ne vous y fiez pas pour des décisions critiques de sécurité — suivez toujours les canaux officiels pour les alertes.</p><p data-l="it" lang="it" class="disclaimer">Questi sono progetti open source indipendenti. Non sono affiliati, approvati o supportati dai fornitori di dati citati (UFAM, UFPP/Alertswiss, SLF, SED, ElCom, UFE, E-Control, transport.opendata.ch o altri). Home Assistant è un marchio della Open Home Foundation; questi progetti sono integrazioni indipendenti della community e non sono affiliati alla Open Home Foundation. Il software è fornito «così com&#x27;è», senza alcuna garanzia. Non fare affidamento su di esso per decisioni critiche per la sicurezza — segui sempre i canali ufficiali per le allerte.</p>
   <p>© 2026 smarthome-swiss.ch · <a href="https://github.com/prusuino" target="_blank" rel="noopener">prusuino on GitHub</a></p>
 </footer>
+<script>
+const TITLES = {"en": "Swiss Hail Protection – Hail warnings for blinds and awnings in Switzerland for Home Assistant", "de": "Swiss Hail Protection – Hagelwarnung und Hagelschutz für Storen in der Schweiz für Home Assistant", "fr": "Swiss Hail Protection – Alertes de grêle pour stores en Suisse pour Home Assistant", "it": "Swiss Hail Protection – Allerte grandine per tapparelle e tende in Svizzera per Home Assistant"};
+function setLang(lang) {
+  if (!TITLES[lang]) lang = "en";
+  document.documentElement.lang = lang;
+  document.title = TITLES[lang];
+  document.querySelectorAll(".lang-switch button").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+}
+document.querySelectorAll(".lang-switch button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+let initial = null;
+try { initial = localStorage.getItem("lang"); } catch (e) {}
+if (!initial) {
+  const nav = (navigator.language || "en").slice(0, 2).toLowerCase();
+  initial = ["de", "fr", "it"].includes(nav) ? nav : "en";
+}
+setLang(initial);
+</script>
 </body>
 </html>
