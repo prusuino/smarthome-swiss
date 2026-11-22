@@ -178,6 +178,7 @@ p.section-sub { color: var(--text-soft); margin-bottom: 1.4rem; max-width: 46rem
 }
 .badge.neutral { background: transparent; border: 1px solid var(--border); color: var(--text-soft); }
 .badge.hacs { background: rgba(22, 163, 74, .15); color: #16a34a; }
+.badge.gold { background: rgba(212, 175, 55, .18); border: 1px solid #d4af37; color: var(--text-soft); }
 .badge.silver { background: rgba(148, 163, 184, .18); border: 1px solid #a8b0bc; color: var(--text-soft); }
 .badge.bronze { background: rgba(205, 127, 50, .15); border: 1px solid #cd7f32; color: var(--text-soft); }
 .card p.desc { font-size: .9rem; color: var(--text-soft); flex: 1; }
@@ -322,11 +323,11 @@ html[lang="de"] [data-l="de"], html[lang="fr"] [data-l="fr"], html[lang="it"] [d
 <li><strong>Any stop in Switzerland</strong>: departure boards for train, tram, bus, ship and cableway, and saved connections from A to B — from transport.opendata.ch, no account needed.</li>
 <li><strong>Four dashboard cards</strong>: a board card that recognizes the sensor type, a departure board laid out like a station display, a connection card and a controls card — two looks, the real operator colours of bus and tram lines, all with a visual editor.</li>
 <li><strong>Browse the timetable</strong>: switch every board from live to any date and time, or to an arrivals board.</li>
-<li><strong>Real time if you want it</strong>: with a free opentransportdata.swiss token, delays to the second, cancellations, platform changes, disruption messages and occupancy.</li>
+<li><strong>Delays, cancellations and occupancy without an account</strong>: a cancelled train stays on the board, struck through and marked. With a free opentransportdata.swiss token on top: delays to the second, platform changes and disruption messages.</li>
 <li><strong>Built for the automation editor</strong>: triggers and conditions for a delayed next departure and a reported disruption, and a blueprint that reminds you before the next departure — no templates needed.</li>
 <li><strong>Two actions for everything else</strong>: <code>swiss_transport.get_departures</code> and <code>swiss_transport.get_connections</code> answer for any stop, configured or not — made for scripts and Assist.</li>
 <li><strong>A dashboard without building one</strong>: the bundled strategy lays out your boards and connections by itself.</li>
-<li><strong>Polls sparingly</strong>: boards about every 90 seconds, connections every 5 minutes, within the quotas of the API.</li>
+<li><strong>Polls sparingly</strong>: boards about every 90 seconds, connections every 5 minutes, to go easy on the free API.</li>
 <li><strong>Set up in a minute</strong>: type part of a station name and pick the stop; German, English, French and Italian; diagnostics download with coordinates and token redacted.</li>
 </ul>
 
