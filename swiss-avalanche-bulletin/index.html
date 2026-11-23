@@ -320,12 +320,17 @@ html[lang="de"] [data-l="de"], html[lang="fr"] [data-l="fr"], html[lang="it"] [d
 <h2 data-l="en" lang="en">Highlights</h2><h2 data-l="de" lang="de">Das kann die Integration</h2><h2 data-l="fr" lang="fr">Points forts</h2><h2 data-l="it" lang="it">Punti di forza</h2>
 <p data-l="de" lang="de" class="note">Diese Liste gibt es nur auf Englisch.</p><p data-l="fr" lang="fr" class="note">Cette liste n&#x27;existe qu&#x27;en anglais.</p><p data-l="it" lang="it" class="note">Questo elenco è disponibile solo in inglese.</p>
 <ul lang="en">
-<li><strong>The danger level for your spot</strong>: your coordinates are resolved to one of about 150 SLF warning regions; the sensors give the danger level 1–5, the region and up to three avalanche problems, refreshed every hour.</li>
+<li><strong>The danger level for your spot</strong>: your coordinates are resolved to one of about 150 SLF warning regions; the sensors give the danger level 1–5 with the Swiss subdivision (3−, 3=, 3+), the core zone in the SLF&#x27;s words (&quot;considerable (3−) above 2200 m&quot;), the region and up to three avalanche problems, refreshed every hour.</li>
+<li><strong>Tomorrow and the weather, as values</strong>: the level the SLF expects for the next day and the trend (increasing, steady, decreasing — subdivision included), new snow of the last and the next 24 hours, the snowfall limit, wind and temperature — sensors you can automate on.</li>
+<li><strong>The whole bulletin in your language</strong>: the SLF&#x27;s texts — avalanche problems, tendency, snowpack, weather review and forecast — come in German, French, Italian or English, whichever Home Assistant uses.</li>
 <li><strong>Several locations</strong>: home, a cabin, the area of the next tour — each is its own entry.</li>
 <li><strong>IMIS measuring stations</strong>: about 200 stations in the Alps and the Jura with snow depth, new snow in 24 hours, air and snow-surface temperature, humidity and wind, every 30 minutes from the official measurement API.</li>
-<li><strong>A station card and a dashboard</strong>: the bundled &quot;SLF IMIS Station&quot; card with a visual editor, and a dashboard strategy that lays out your locations and stations by itself.</li>
+<li><strong>A danger map of Switzerland</strong>: the bundled map card colours all warning regions in the European danger scale, marks your locations and names any region you tap.</li>
+<li><strong>The bulletin on one card</strong>: level with subdivision, core zone, tomorrow&#x27;s level and trend, every avalanche problem with its icon, an aspect rose and the elevation band, new snow and snowfall limit, and the SLF&#x27;s texts to unfold.</li>
+<li><strong>A station card and a dashboard</strong>: the bundled &quot;SLF IMIS Station&quot; card with a visual editor, and a dashboard strategy that lays out the map, your locations and stations by itself.</li>
 <li><strong>Built for the automation editor</strong>: triggers (danger level reached, danger level changed), conditions (danger level at least / below) and a notification blueprint — no templates needed.</li>
-<li><strong>No value rather than a stale one</strong>: outside the season the bulletin sensors report nothing, and a station value counts as current only within 3 hours.</li>
+<li><strong>No value rather than a stale one</strong>: outside the season, and in regions the bulletin lists without a rating (the lowlands in winter), the bulletin sensors report nothing; a station value counts as current only within 3 hours.</li>
+<li><strong>Light on the network</strong>: all locations share one bulletin download, and an unchanged bulletin is not downloaded again.</li>
 <li><strong>Set up in a minute</strong>: starts from your Home Assistant location, stations are picked from a list sorted by distance; German, English, French and Italian; diagnostics download with your coordinates redacted.</li>
 </ul>
 
